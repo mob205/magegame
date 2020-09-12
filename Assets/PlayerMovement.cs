@@ -9,14 +9,12 @@ public class PlayerMovement : MonoBehaviour {
 
     Rigidbody2D _rb;
     Animator _anim;
-    BoxCollider2D _playerCollider;
     LayerMask groundLayer;
 
     void Start ()
     {
         _rb = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
-        _playerCollider = GetComponent<BoxCollider2D>();
         groundLayer = LayerMask.GetMask("Ground");
 	}
 	
