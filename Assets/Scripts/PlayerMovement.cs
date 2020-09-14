@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    [SerializeField] float _movementSpeed = 7;
-    [SerializeField] float _jumpForce = 5;
+    [SerializeField] public float movementSpeed = 7;
+    [SerializeField] public float jumpForce = 5;
 
     Rigidbody2D _rb;
     Animator _anim;
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if(CheckGrounded())
         {
-            _rb.velocity = Vector2.up * _jumpForce;
+            _rb.velocity = Vector2.up * jumpForce;
         }
     }
     private void ProcessMovement()
@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour {
         var horizontal = Input.GetAxisRaw("Horizontal");
         Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized;
 
-        _rb.velocity = new Vector2(movement.x * _movementSpeed, _rb.velocity.y);
+        _rb.velocity = new Vector2(movement.x * movementSpeed, _rb.velocity.y);
         
         if (horizontal != 0)
         {

@@ -6,14 +6,18 @@ public class Laser : Ability
 {
     [SerializeField] float warmupDuration;
     [SerializeField] GameObject laserPrefab;
+    [SerializeField] IEffect<ISlowable> warmupEffect;
+    [SerializeField] float effectModifier;
 
     GameObject laserBeam;
     ParticleSystem warmupParticles;
     Camera mainCamera;
+    ISlowable effectTarget;
     void Start()
     {
         warmupParticles = GetComponent<ParticleSystem>();
         mainCamera = Camera.main;
+        effectTarget = GetComponentInParent<ISlowable>();
     }
     protected override void Update()
     {
@@ -38,6 +42,8 @@ public class Laser : Ability
     public override void CastAbility()
     {
         warmupParticles.Play();
+        if(warmupEffect != null)
+            warmupEffect.ApplyEffect(effectTarget, effectModifier);
 
         StartCoroutine(DelayedCast());
     }
@@ -53,5 +59,7 @@ public class Laser : Ability
         Destroy(laserBeam);
         warmupParticles.Stop();
         StartCooldown();
+        if(warmupEffect != null)
+            warmupEffect.ApplyEffect(effectTarget, 1/effectModifier);
     }
 }
