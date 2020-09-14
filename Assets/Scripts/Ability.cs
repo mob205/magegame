@@ -16,7 +16,7 @@ public class Ability : MonoBehaviour
         get { return castTime; }
     }
     [SerializeField] public Sprite icon;
-    protected bool activeCooldown;
+    public bool activeCooldown;
     [HideInInspector] public float remainingCD;
     
 

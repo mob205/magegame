@@ -46,6 +46,7 @@ public class Laser : Ability
         yield return new WaitForSeconds(warmupDuration);
 
         laserBeam = Instantiate(laserPrefab, transform.position, Quaternion.identity, transform);
+        AimLaser();
 
         yield return new WaitForSeconds(castTime - warmupDuration);
 

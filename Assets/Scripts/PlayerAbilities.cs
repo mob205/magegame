@@ -37,7 +37,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         for (int i = 0; i < abilities.Length; i++)
         {
-            if (Input.GetAxisRaw("Ability" + i) == 1 && !isCasting) 
+            if (Input.GetAxisRaw("Ability" + i) == 1 && !isCasting && !abilities[i].activeCooldown)  
             {
                 abilities[i].CastAbility();
                 if(abilities[i].CastTime > 0)
