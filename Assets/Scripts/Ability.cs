@@ -11,9 +11,13 @@ public class Ability : MonoBehaviour
         get { return cooldown; }
     }
     [SerializeField] protected float castTime;
+    public float CastTime
+    {
+        get { return castTime; }
+    }
     [SerializeField] public Sprite icon;
     protected bool activeCooldown;
-    public float remainingCD;
+    [HideInInspector] public float remainingCD;
     
 
     void Start()
@@ -21,11 +25,11 @@ public class Ability : MonoBehaviour
 
     }
 
-    protected void Update()
+    protected virtual void Update()
     {
         UpdateCooldown();
     }
-
+    // Check for cooldowns in a way where progress can be monitored for timers
     private void UpdateCooldown()
     {
         if (activeCooldown)
