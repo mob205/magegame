@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Laser : Ability
 {
-    [SerializeField] float warmupDuration;
-    [SerializeField] GameObject laserPrefab;
-    [SerializeField] IEffect<ISlowable> warmupEffect;
-    [SerializeField] float effectModifier;
+    [SerializeField] float warmupDuration = 2;
+    [SerializeField] GameObject laserPrefab = null;
+    [SerializeField] IEffect<ISlowable> warmupEffect = null;
+    [SerializeField] float effectModifier = 2;
 
     GameObject laserBeam;
     ParticleSystem warmupParticles;

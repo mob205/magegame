@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Fireball : Ability
 {
-    [SerializeField] float projectileLifetime;
-    [SerializeField] GameObject projectile;
-    [SerializeField] float projectileSpeed;
+    [SerializeField] float projectileLifetime = 5;
+    [SerializeField] GameObject projectile = null;
+    [SerializeField] float projectileSpeed = 10;
 
     public override void CastAbility()
     {

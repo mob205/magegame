@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Shield : Ability
 {
-    [SerializeField] float shieldDuration;
-    [SerializeField] GameObject shieldObject;
-    [SerializeField] float followDist;
+    [SerializeField] float shieldDuration = 5;
+    [SerializeField] GameObject shieldObject = null;
+    [SerializeField] float followDist = 2;
 
     // Update is called once per frame
     public override void CastAbility()
