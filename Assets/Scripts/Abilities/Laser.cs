@@ -10,10 +10,12 @@ public class Laser : Ability
     GameObject laserBeam;
     ParticleSystem warmupParticles;
     Camera mainCamera;
+    Buff castDebuff;
     void Start()
     {
         warmupParticles = GetComponent<ParticleSystem>();
         mainCamera = Camera.main;
+        castDebuff = GetComponent<Buff>();
     }
     protected override void Update()
     {
@@ -38,6 +40,7 @@ public class Laser : Ability
     public override void CastAbility()
     {
         warmupParticles.Play();
+        if (castDebuff) { castDebuff.ApplyBuff(); }
 
         StartCoroutine(DelayedCast());
     }
@@ -52,6 +55,7 @@ public class Laser : Ability
 
         Destroy(laserBeam);
         warmupParticles.Stop();
+        if (castDebuff) { castDebuff.RemoveBuff(); }
         StartCooldown();
     }
 }

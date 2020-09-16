@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour, IMove {
 
     [SerializeField] public float movementSpeed = 7;
+    public float MoveSpeed
+    {
+        get { return movementSpeed; }
+        set { movementSpeed = value; }
+    }
     [SerializeField] public float jumpForce = 5;
 
     Rigidbody2D _rb;
