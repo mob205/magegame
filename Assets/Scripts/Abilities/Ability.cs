@@ -34,7 +34,7 @@ public class Ability : MonoBehaviour
         }
     }
 
-    public virtual void CastAbility()
+    public virtual void CastAbility(Transform target)
     {
         Debug.Log("Spell cast not implemented.");
     }

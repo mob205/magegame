@@ -50,7 +50,7 @@ public class EnemyRanged : MonoBehaviour
         if (isAggro)
         {
             var random = Random.Range(0, abilities.Length - 1);
-            abilities[random].CastAbility();
+            abilities[random].CastAbility(player.transform);
             StartCastTime(abilities[random].CastTime + castDelay);
         }
     }

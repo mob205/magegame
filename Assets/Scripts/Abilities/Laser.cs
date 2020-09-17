@@ -11,6 +11,7 @@ public class Laser : Ability
     ParticleSystem warmupParticles;
     Camera mainCamera;
     Buff castDebuff;
+    Transform targetTransform;
     void Start()
     {
         warmupParticles = GetComponent<ParticleSystem>();
@@ -28,18 +29,19 @@ public class Laser : Ability
     void AimLaser()
     {
         // Point laser to the mouse
-        Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 targetPos = targetTransform.position;
 
         var pivotPos = transform.position;
 
-        mousePos.x -= pivotPos.x;
-        mousePos.y -= pivotPos.y;
+        targetPos.x -= pivotPos.x;
+        targetPos.y -= pivotPos.y;
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
         laserBeam.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
-    public override void CastAbility()
+    public override void CastAbility(Transform target)
     {
+        targetTransform = target;
         warmupParticles.Play();
         if (castDebuff) { castDebuff.ApplyBuff(); }
 

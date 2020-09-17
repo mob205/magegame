@@ -9,11 +9,11 @@ public class Shield : Ability
     [SerializeField] float followDist = 2;
 
     // Update is called once per frame
-    public override void CastAbility()
+    public override void CastAbility(Transform target)
     {
         // Gets direction from player to mouse pos.
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var direction = (mousePos - (Vector2)transform.position).normalized;
+        Vector2 targetPos = target.position;
+        var direction = (targetPos - (Vector2)transform.position).normalized;
 
         // Create shield object
         var shieldInstance = Instantiate(shieldObject, transform.position, Quaternion.identity, transform);
@@ -21,10 +21,10 @@ public class Shield : Ability
         // Face instance toward mouse
         var pivotPos = transform.position;
 
-        mousePos.x -= pivotPos.x;
-        mousePos.y -= pivotPos.y;
+        targetPos.x -= pivotPos.x;
+        targetPos.y -= pivotPos.y;
 
-        float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
         shieldInstance.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
         // Add the following distance offset from player

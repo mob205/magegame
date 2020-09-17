@@ -9,6 +9,7 @@ public class PlayerAbilities : MonoBehaviour
     private bool isCasting;
     float remainingCT;
     public static Ability[] Abilities { get; private set; } = new Ability[5];
+
     // Abilities are scripts attached to children objects of the player object.
     void Awake()
     {
@@ -38,7 +39,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             if (Input.GetAxisRaw("Ability" + i) == 1 && !isCasting && !Abilities[i].activeCooldown)  
             {
-                Abilities[i].CastAbility();
+                Abilities[i].CastAbility(MouseFollow.mousePos);
                 if(Abilities[i].CastTime > 0)
                 {
                     StartCastTime(Abilities[i].CastTime);
