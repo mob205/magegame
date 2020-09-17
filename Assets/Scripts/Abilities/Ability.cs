@@ -19,12 +19,6 @@ public class Ability : MonoBehaviour
     public bool activeCooldown;
     [HideInInspector] public float remainingCD;
     
-
-    void Start()
-    {
-
-    }
-
     protected virtual void Update()
     {
         UpdateCooldown();

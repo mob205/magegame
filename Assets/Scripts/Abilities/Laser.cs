@@ -27,6 +27,7 @@ public class Laser : Ability
     }
     void AimLaser()
     {
+        // Point laser to the mouse
         Vector2 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
 
         var pivotPos = transform.position;
@@ -46,6 +47,7 @@ public class Laser : Ability
     }
     IEnumerator DelayedCast()
     {
+        // Instantiate and aim laser after delay. After the remaining cast time, remove all effects and start cd.
         yield return new WaitForSeconds(warmupDuration);
 
         laserBeam = Instantiate(laserPrefab, transform.position, Quaternion.identity, transform);

@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class PlayerAbilities : MonoBehaviour
 {
-    static Ability[] abilities = new Ability[5];
+    public static PlayerAbilities instance;
+
     private bool isCasting;
     float remainingCT;
-    public static Ability[] Abilities
-    {
-        get { return abilities; }
-    }
+    public static Ability[] Abilities { get; private set; } = new Ability[5];
     // Abilities are scripts attached to children objects of the player object.
     void Awake()
     {
-        abilities = GetComponentsInChildren<Ability>();
+        instance = this;
+        Abilities = GetComponentsInChildren<Ability>();
     }
     void Update()
     {
@@ -35,14 +34,14 @@ public class PlayerAbilities : MonoBehaviour
     // Iterate through every active ability. Cast ability if has active input.
     private void CastAbilities()
     {
-        for (int i = 0; i < abilities.Length; i++)
+        for (int i = 0; i < Abilities.Length; i++)
         {
-            if (Input.GetAxisRaw("Ability" + i) == 1 && !isCasting && !abilities[i].activeCooldown)  
+            if (Input.GetAxisRaw("Ability" + i) == 1 && !isCasting && !Abilities[i].activeCooldown)  
             {
-                abilities[i].CastAbility();
-                if(abilities[i].CastTime > 0)
+                Abilities[i].CastAbility();
+                if(Abilities[i].CastTime > 0)
                 {
-                    StartCastTime(abilities[i].CastTime);
+                    StartCastTime(Abilities[i].CastTime);
                 }
                 Debug.Log("Casting Ability" + i);
             }
