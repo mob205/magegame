@@ -19,13 +19,7 @@ public class Shield : Ability
         var shieldInstance = Instantiate(shieldObject, transform.position, Quaternion.identity, transform);
 
         // Face instance toward mouse
-        var pivotPos = transform.position;
-
-        targetPos.x -= pivotPos.x;
-        targetPos.y -= pivotPos.y;
-
-        float angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
-        shieldInstance.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        shieldInstance.transform.rotation = Utility.GetFacingAngle(transform.position, targetPos);
 
         // Add the following distance offset from player
         shieldInstance.transform.position += shieldInstance.transform.forward * followDist;

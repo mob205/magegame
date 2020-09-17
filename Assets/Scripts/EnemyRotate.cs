@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class EnemyRotate : MonoBehaviour
 {
-    [SerializeField] GameObject rotator;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] GameObject rotator = null;
 
-    // Update is called once per frame
+    Transform player;
+    private void Start()
+    {
+        player = PlayerAbilities.instance.transform;
+    }
     void Update()
     {
-        
+        rotator.transform.rotation = Utility.GetFacingAngle(transform.position, player.transform.position);
     }
 }

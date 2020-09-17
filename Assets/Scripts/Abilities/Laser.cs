@@ -28,16 +28,7 @@ public class Laser : Ability
     }
     void AimLaser()
     {
-        // Point laser to the mouse
-        Vector2 targetPos = targetTransform.position;
-
-        var pivotPos = transform.position;
-
-        targetPos.x -= pivotPos.x;
-        targetPos.y -= pivotPos.y;
-
-        float angle = Mathf.Atan2(targetPos.y, targetPos.x) * Mathf.Rad2Deg;
-        laserBeam.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        laserBeam.transform.rotation = Utility.GetFacingAngle(transform.position, targetTransform.position);
     }
     public override void CastAbility(Transform target)
     {

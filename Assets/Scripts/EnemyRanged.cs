@@ -15,6 +15,9 @@ public class EnemyRanged : MonoBehaviour
     void Awake()
     {
         abilities = GetComponentsInChildren<Ability>();
+    }
+    private void Start()
+    {
         player = PlayerAbilities.instance.gameObject;
     }
     void Update()
@@ -47,9 +50,9 @@ public class EnemyRanged : MonoBehaviour
     }
     private void CastAbilities()
     {
-        if (isAggro)
+        if (isAggro && !isCasting)
         {
-            var random = Random.Range(0, abilities.Length - 1);
+            var random = Random.Range(0, abilities.Length);
             abilities[random].CastAbility(player.transform);
             StartCastTime(abilities[random].CastTime + castDelay);
         }

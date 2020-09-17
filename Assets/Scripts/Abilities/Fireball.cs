@@ -10,13 +10,10 @@ public class Fireball : Ability
 
     public override void CastAbility(Transform target)
     {
-        // Gets direction from player to mouse pos.
-        //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var direction = ((Vector2)target.position - (Vector2)transform.position).normalized;
 
         // Create and fire projectile
-        var fireballInstance = Instantiate(projectile, transform.position, Quaternion.LookRotation(direction, Vector3.up));
-        fireballInstance.GetComponent<Rigidbody2D>().velocity = direction * projectileSpeed;
+        var fireballInstance = Instantiate(projectile, transform.position, Utility.GetFacingAngle(transform.position, target.position));
+        fireballInstance.GetComponent<Rigidbody2D>().velocity = fireballInstance.transform.right * projectileSpeed;
 
         Destroy(fireballInstance, projectileLifetime);
 
