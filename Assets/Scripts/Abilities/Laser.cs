@@ -49,6 +49,7 @@ public class Laser : Ability
         laserBeam.damagePerTick = damagePerTick;
         laserBeam.ticksPerSecond = ticksPerSecond;
         laserBeam.caster = gameObject;
+        laserBeam.tag = gameObject.tag;
 
         AimLaser();
 

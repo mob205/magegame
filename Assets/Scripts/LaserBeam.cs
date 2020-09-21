@@ -17,7 +17,7 @@ public class LaserBeam : MonoBehaviour
     // Adds/removes objects to list upon entering/leaving beam
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!(caster == collision.gameObject))
+        if (!collision.CompareTag(gameObject.tag))
         {
             var hitHealth = collision.GetComponent<Health>();
             if (hitHealth && !entities.Contains(hitHealth)) { entities.Add(hitHealth); }
@@ -25,7 +25,7 @@ public class LaserBeam : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!(caster == collision.gameObject))
+        if (!collision.CompareTag(gameObject.tag))
         {
             var hitHealth = collision.GetComponent<Health>();
             if (hitHealth && entities.Contains(hitHealth)) { entities.Remove(hitHealth); }

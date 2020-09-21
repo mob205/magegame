@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!(caster == collision.gameObject)) 
+        if (!collision.CompareTag(caster.tag)) 
         {
             var hitHealth = collision.GetComponent<Health>();
             if (hitHealth)
