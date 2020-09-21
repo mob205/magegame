@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class Utility
 {
+    // Gets the angle an object must rotate to face a point using arctangent.
     public static Quaternion GetFacingAngle(Vector2 original, Vector2 target)
     {
         target.x -= original.x;

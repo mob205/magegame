@@ -15,10 +15,12 @@ public class Fireball : Ability
         // Create and fire projectile
         var fireballInstance = Instantiate(projectile, transform.position, Utility.GetFacingAngle(transform.position, target.position));
         fireballInstance.GetComponent<Rigidbody2D>().velocity = fireballInstance.transform.right * projectileSpeed;
+        
+        // Assign variables in fireball
         fireballInstance.caster = transform.parent.gameObject;
         fireballInstance.damage = projectileDamage;
 
-        Destroy(fireballInstance, projectileLifetime);
+        Destroy(fireballInstance.gameObject, projectileLifetime);
 
         StartCooldown();
     }

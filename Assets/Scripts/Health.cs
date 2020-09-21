@@ -28,6 +28,6 @@ public class Health : MonoBehaviour
 
     public void StartDeath()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

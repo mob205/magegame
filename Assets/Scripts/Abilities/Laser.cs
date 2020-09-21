@@ -5,9 +5,11 @@ using UnityEngine;
 public class Laser : Ability
 {
     [SerializeField] float warmupDuration = 2;
-    [SerializeField] GameObject laserPrefab = null;
+    [SerializeField] float damagePerTick = 10;
+    [SerializeField] int ticksPerSecond = 1;
+    [SerializeField] LaserBeam laserPrefab = null;
 
-    GameObject laserBeam;
+    LaserBeam laserBeam;
     ParticleSystem warmupParticles;
     Camera mainCamera;
     Buff castDebuff;
@@ -44,11 +46,15 @@ public class Laser : Ability
         yield return new WaitForSeconds(warmupDuration);
 
         laserBeam = Instantiate(laserPrefab, transform.position, Quaternion.identity, transform);
+        laserBeam.damagePerTick = damagePerTick;
+        laserBeam.ticksPerSecond = ticksPerSecond;
+        laserBeam.caster = gameObject;
+
         AimLaser();
 
         yield return new WaitForSeconds(castTime - warmupDuration);
 
-        Destroy(laserBeam);
+        Destroy(laserBeam.gameObject);
         warmupParticles.Stop();
         if (castDebuff) { castDebuff.RemoveBuff(); }
         StartCooldown();

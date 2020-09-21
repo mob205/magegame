@@ -52,8 +52,9 @@ MonoBehaviour:
   activeCooldown: 0
   remainingCD: 0
   warmupDuration: 2
-  laserPrefab: {fileID: 5513409321215506966, guid: 3b0d87c500f8604469796f999df5468d,
-    type: 3}
+  damagePerTick: 15
+  ticksPerSecond: 3
+  laserPrefab: {fileID: 191105912, guid: 3b0d87c500f8604469796f999df5468d, type: 3}
 --- !u!198 &4974267808699261040
 ParticleSystem:
   m_ObjectHideFlags: 0
