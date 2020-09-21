@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(CircleCollider2D))]
 public class EnemyRanged : MonoBehaviour
 {
     [SerializeField] float castDelay = 1f;
+    [SerializeField] float aggroRange = 10f;
+
     Ability[] abilities = new Ability[5];
     private bool isCasting;
     float remainingCT;
@@ -24,17 +25,15 @@ public class EnemyRanged : MonoBehaviour
     {
         UpdateCastTime();
         CastAbilities();
+        CheckAggro();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void CheckAggro()
     {
-        if (collision.CompareTag("Player"))
+        if(Vector2.Distance(transform.position, player.transform.position) <= aggroRange)
         {
             isAggro = true;
         }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        else
         {
             isAggro = false;
         }

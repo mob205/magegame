@@ -4763,6 +4763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8637592461363259830}
+  - component: {fileID: 8221297744530416966}
   - component: {fileID: 8637592461363259831}
   - component: {fileID: 8637592461363259828}
   m_Layer: 0
@@ -4788,6 +4789,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8221297744530416966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8637592461363259833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9016b2bbcf4688429e0b843c414c24c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  caster: {fileID: 0}
+  destroyParticles: {fileID: 6915032385478365651, guid: 735567181eec2094e909b43527deded4,
+    type: 3}
 --- !u!58 &8637592461363259831
 CircleCollider2D:
   m_ObjectHideFlags: 0
