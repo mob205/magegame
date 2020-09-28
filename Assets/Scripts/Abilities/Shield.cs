@@ -8,7 +8,6 @@ public class Shield : Ability
     [SerializeField] GameObject shieldObject = null;
     [SerializeField] float followDist = 2;
 
-    // Update is called once per frame
     public override void CastAbility(Transform target)
     {
         // Gets direction from caster to mouse pos.

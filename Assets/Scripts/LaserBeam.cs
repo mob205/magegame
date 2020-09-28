@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserBeam : MonoBehaviour
 {
+    // TODO: Ray-based instead of collider-based so the ray can be stopped. 
     public float damagePerTick = 10;
     public int ticksPerSecond = 1;
     public GameObject caster = null;
