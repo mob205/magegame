@@ -40,6 +40,7 @@ public class EnemyRanged : MonoBehaviour
     }
     private void UpdateCastTime()
     {
+        // Update the time until object can cast another ability.
         if (isCasting)
             remainingCT -= Time.deltaTime;
         if (remainingCT <= 0)

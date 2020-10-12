@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BackgroundBehavior : MonoBehaviour
 {
-    
     float yOffset;
     Camera cam;
     void Start()
@@ -16,6 +15,6 @@ public class BackgroundBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector2(transform.position.x, cam.transform.position.y + yOffset);
+            transform.position = new Vector2(transform.position.x, cam.transform.position.y + yOffset);
     }
 }

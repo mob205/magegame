@@ -5,7 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float maxHP = 100;
-    private float currentHealth = 0;
+    public float currentHealth = 0;
+    [SerializeField] bool isInvulnerable = false;
 
     void Start()
     {
@@ -14,6 +15,8 @@ public class Health : MonoBehaviour
 
     public void Damage(float amount)
     {
+        if(isInvulnerable) { return; }
+
         currentHealth -= amount;
         if (currentHealth <= 0)
         {

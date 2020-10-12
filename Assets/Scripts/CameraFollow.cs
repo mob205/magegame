@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
         player = PlayerAbilities.instance;
         cam = GetComponent<Camera>();
     }
-    void Update()
+    void FixedUpdate()
     {
         FollowPlayer();
     }
