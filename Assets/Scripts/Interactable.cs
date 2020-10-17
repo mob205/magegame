@@ -7,9 +7,9 @@ public abstract class Interactable : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Interact();
+        Interact(collision);
     }
-    public virtual void Interact()
+    public virtual void Interact(Collider2D collision)
     {
         Debug.Log("Base interaction not implemented.");
     }
