@@ -8,10 +8,15 @@ public class ProtoAbilitySlot : MonoBehaviour
     public Ability currentAbility;
     SelectionSlot hoveredSlot = null;
     Image slotImage = null;
+    [SerializeField] Sprite defaultImage = null;
 
+    private void Start()
+    {
+        slotImage = GetComponent<Image>();
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && hoveredSlot != null)
+        if (Input.GetMouseButtonUp(0) && hoveredSlot != null)
         {
             currentAbility = hoveredSlot.ability;
             slotImage.sprite = currentAbility.icon;
@@ -26,5 +31,10 @@ public class ProtoAbilitySlot : MonoBehaviour
     {
         Debug.Log("no longer triggered");
         hoveredSlot = null;
+    }
+    public void Reset()
+    {
+        currentAbility = null;
+        slotImage.sprite = defaultImage;
     }
 }

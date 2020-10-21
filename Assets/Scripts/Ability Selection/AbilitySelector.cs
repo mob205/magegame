@@ -39,5 +39,10 @@ public class AbilitySelector : MonoBehaviour
         {
             hovered = slot;
         }
+        var abilitySlot = hit.collider.GetComponent<ProtoAbilitySlot>();
+        if (abilitySlot && Input.GetMouseButtonDown(0))
+        {
+            abilitySlot.Reset();
+        }
     }
 }

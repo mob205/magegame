@@ -24,6 +24,11 @@ public class SelectionSlot : MonoBehaviour
         CheckSelection();
         Drag();
     }
+    //private void LateUpdate()
+    //{
+    //    CheckSelection();
+    //    Drag();
+    //}
     void Drag()
     {
         if(AbilitySelector.selected == this)
