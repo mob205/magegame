@@ -21,7 +21,11 @@ public class PlayerAbilities : MonoBehaviour
         UpdateCastTime();
         CastAbilities();
     }
-    
+    public void UpdateAbilities()
+    {
+        Abilities = GetComponentsInChildren<Ability>();
+        AbilityUI.instance.UpdateAbilityUI();
+    }
     // Check for cast times in a way where progress can be monitored
     private void UpdateCastTime()
     {

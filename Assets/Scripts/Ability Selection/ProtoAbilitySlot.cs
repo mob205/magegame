@@ -25,7 +25,7 @@ public class ProtoAbilitySlot : MonoBehaviour
             }
             else
             {
-                Reset();
+                ResetSlot();
             }
         }
     }
@@ -49,7 +49,7 @@ public class ProtoAbilitySlot : MonoBehaviour
     {
         hoveredSlot = null;
     }
-    public void Reset()
+    public void ResetSlot()
     {
         currentAbility = null;
         slotImage.sprite = defaultImage;

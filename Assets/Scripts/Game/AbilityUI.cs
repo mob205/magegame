@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class AbilityUI : MonoBehaviour
 {
+    public static AbilityUI instance;
+
     [SerializeField] Image[] abilitySlots = new Image[5];
     Slider[] cooldownTimers;
     Ability[] abilities;
@@ -13,7 +15,12 @@ public class AbilityUI : MonoBehaviour
     {
         abilities = PlayerAbilities.Abilities;
         cooldownTimers = new Slider[abilities.Length];
+        instance = this;
 
+        UpdateAbilityUI();
+    }
+    public void UpdateAbilityUI()
+    {
         // Display each ability's sprite in the UI bar and get their cooldown timer UI.
         for (int i = 0; i < abilities.Length; i++)
         {
@@ -21,7 +28,6 @@ public class AbilityUI : MonoBehaviour
             cooldownTimers[i] = abilitySlots[i].GetComponentInChildren<Slider>();
         }
     }
-
     void Update()
     {
         // Set cooldown timer to % of cooldown remaining.
