@@ -11,16 +11,19 @@ public class AbilityUI : MonoBehaviour
     Slider[] cooldownTimers;
     Ability[] abilities;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
-        abilities = PlayerAbilities.Abilities;
-        cooldownTimers = new Slider[abilities.Length];
-        instance = this;
-
-        UpdateAbilityUI();
+        
     }
     public void UpdateAbilityUI()
     {
+        abilities = PlayerAbilities.Abilities;
+        cooldownTimers = new Slider[abilities.Length];
+
         // Display each ability's sprite in the UI bar and get their cooldown timer UI.
         for (int i = 0; i < abilities.Length; i++)
         {

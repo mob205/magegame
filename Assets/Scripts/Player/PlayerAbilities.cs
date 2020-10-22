@@ -14,12 +14,24 @@ public class PlayerAbilities : MonoBehaviour
     void Awake()
     {
         instance = this;
-        Abilities = GetComponentsInChildren<Ability>();
+    }
+    private void Start()
+    {
+        LoadAbilitiesFromSelector();
     }
     void Update()
     {
         UpdateCastTime();
         CastAbilities();
+    }
+    public void LoadAbilitiesFromSelector()
+    {
+        foreach(Ability ability in AbilitySelector.selectedAbilities)
+        {
+            if(ability)
+                Instantiate(ability, transform);
+        }
+        UpdateAbilities();
     }
     public void UpdateAbilities()
     {

@@ -50,6 +50,6 @@ MonoBehaviour:
   remainingCD: 0
   projectile: {fileID: 8221297744530416966, guid: 239931585b8acc142b6f702569b6361a,
     type: 3}
-  projectileDamage: 5
+  projectileDamage: 10
   projectileLifetime: 4
   projectileSpeed: 15
