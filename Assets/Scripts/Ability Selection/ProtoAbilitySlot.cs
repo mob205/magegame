@@ -19,17 +19,34 @@ public class ProtoAbilitySlot : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && hoveredSlot != null)
         {
             currentAbility = hoveredSlot.ability;
-            slotImage.sprite = currentAbility.icon;
+            if (IsAllowedDuplicate(currentAbility, hoveredSlot.maxDuplicates))
+            {
+                slotImage.sprite = currentAbility.icon;
+            }
+            else
+            {
+                Reset();
+            }
         }
+    }
+    bool IsAllowedDuplicate(Ability abilityToAdd, int maxDuplicates)
+    {
+        var timesFound = 0;
+        for (int i = 0; i < AbilitySelector.selectedAbilities.Length; i++)
+        {
+            if (AbilitySelector.selectedAbilities[i] == currentAbility)
+            {
+                timesFound++;
+            }
+        }
+        return timesFound <= maxDuplicates;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trigger");
         hoveredSlot = collision.GetComponentInParent<SelectionSlot>();
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("no longer triggered");
         hoveredSlot = null;
     }
     public void Reset()

@@ -7,23 +7,19 @@ public class AbilitySelector : MonoBehaviour
     public static SelectionSlot hovered;
     public static SelectionSlot selected;
 
-    // Start is called before the first frame update
+    ProtoAbilitySlot[] abilitySlots = new ProtoAbilitySlot[5];
+    public static Ability[] selectedAbilities = new Ability[5];
+
     void Start()
     {
-        
+        abilitySlots = FindObjectsOfType<ProtoAbilitySlot>();
     }
 
     void Update()
     {
         SelectSlot();
         CheckUnselect();
-    }
-    void CheckUnselect()
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            selected = null;
-        }
+        GetSelectedAbilities();
     }
     private static void SelectSlot()
     {
@@ -43,6 +39,22 @@ public class AbilitySelector : MonoBehaviour
         if (abilitySlot && Input.GetMouseButtonDown(0))
         {
             abilitySlot.Reset();
+        }
+    }
+    void CheckUnselect()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            selected = null;
+        }
+    }
+    void GetSelectedAbilities()
+    {
+        for (int i = 0; i < abilitySlots.Length; i++)
+        {
+            selectedAbilities[i] = abilitySlots[i].currentAbility;
+            //if (selectedAbilities[i])
+            //    Debug.Log("Slot " + i + ": " + selectedAbilities[i].name);
         }
     }
 }

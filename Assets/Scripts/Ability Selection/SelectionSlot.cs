@@ -8,6 +8,8 @@ public class SelectionSlot : MonoBehaviour
     public Ability ability = null;
     public string abilityName = "Ability not assigned";
     [TextArea] public string description = "Ability not assigned";
+    public int maxDuplicates = 0;
+
     [SerializeField] Image dragImage = null;
     Vector2 dragOffset;
     Camera cam;
@@ -24,11 +26,6 @@ public class SelectionSlot : MonoBehaviour
         CheckSelection();
         Drag();
     }
-    //private void LateUpdate()
-    //{
-    //    CheckSelection();
-    //    Drag();
-    //}
     void Drag()
     {
         if(AbilitySelector.selected == this)
