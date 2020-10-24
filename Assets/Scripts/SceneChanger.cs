@@ -9,6 +9,17 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    public void LoadLevelFromUnlocker()
+    {
+        SceneManager.LoadScene(LevelUnlocker.SelectedLevel);
+    }
+    public void LoadLevelSelecter()
+    {
+        if(LevelUnlocker.SelectedLevel != null)
+        {
+            SceneManager.LoadScene("Spell Selector");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
