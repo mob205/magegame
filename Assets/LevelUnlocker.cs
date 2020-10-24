@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class LevelUnlocker
 {
-    public static List<string> UnlockedLevels { get; } = new List<string>() { "Grassland(1-1)", "Grassland(1-2)" };
+    public static List<string> UnlockedLevels { get; } = new List<string>() { "Grassland(1-1)" };
     public static string SelectedLevel { get; private set; }
 
     public static void UnlockLevel(string levelName)
