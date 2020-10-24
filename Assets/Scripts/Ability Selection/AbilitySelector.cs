@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class AbilitySelector : MonoBehaviour
 {
+    [SerializeField] ProtoAbilitySlot[] abilitySlots = null;
+
     public static SelectionSlot hovered;
     public static SelectionSlot selected;
 
-    ProtoAbilitySlot[] abilitySlots = new ProtoAbilitySlot[5];
     public static Ability[] selectedAbilities = new Ability[5];
-
-    void Start()
-    {
-        abilitySlots = FindObjectsOfType<ProtoAbilitySlot>();
-    }
 
     void Update()
     {

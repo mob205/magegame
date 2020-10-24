@@ -32,7 +32,7 @@ public class CameraFollow : MonoBehaviour
 
         // Ensures camera stays within view box bounds
         x = Mathf.Clamp(x, min.x + cameraHalfX, max.x - cameraHalfX);
-        y = Mathf.Clamp(y, min.y + cam.orthographicSize, max.y = cam.orthographicSize);
+        y = Mathf.Clamp(y, min.y + cam.orthographicSize, max.y - cam.orthographicSize);
 
         // Smoothly move camera to calculated position. Vector3 Lerp (vs 2) to preserve camera's z offset.
         transform.position = Vector3.Lerp(transform.position, new Vector3(x, y, transform.position.z), smoothing);

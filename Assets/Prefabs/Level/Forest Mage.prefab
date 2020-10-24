@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castDelay: 0
-  aggroRange: 16
+  aggroRange: 15
 --- !u!114 &1393709521935037305
 MonoBehaviour:
   m_ObjectHideFlags: 0
