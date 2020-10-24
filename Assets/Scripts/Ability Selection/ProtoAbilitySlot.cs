@@ -16,6 +16,7 @@ public class ProtoAbilitySlot : MonoBehaviour
     }
     void Update()
     {
+        // Checks for mouse release when there is a dragged Slot in the drop range.
         if (Input.GetMouseButtonUp(0) && hoveredSlot != null)
         {
             currentAbility = hoveredSlot.ability;
@@ -41,6 +42,7 @@ public class ProtoAbilitySlot : MonoBehaviour
         }
         return timesFound <= maxDuplicates;
     }
+    // Detect when a dragged SelectionSlot object is in drop range.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hoveredSlot = collision.GetComponentInParent<SelectionSlot>();

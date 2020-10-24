@@ -19,6 +19,7 @@ public class Laser : Ability
         warmupParticles = GetComponent<ParticleSystem>();
         mainCamera = Camera.main;
         castDebuff = GetComponent<Buff>();
+        castDebuff.target = GetComponentInParent<Buffable>();
     }
     protected override void Update()
     {

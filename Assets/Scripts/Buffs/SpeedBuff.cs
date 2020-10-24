@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SpeedBuff : Buff
 {
-    public Buffable target = null;
     public float modifier;
     IMove moveScript;
 
