@@ -8,6 +8,7 @@ public class Chest : Interactable
     bool isOpen = false;
     [SerializeField] Sprite openChest = null;
     [SerializeField] Transform openObject = null;
+    [SerializeField] Ability unlockAbility = null;
     public override void Interact(Collider2D collision)
     {
         if (!isOpen && collision.CompareTag("Player"))
@@ -18,7 +19,7 @@ public class Chest : Interactable
             {
                 openObject.gameObject.SetActive(true);
             }
-
+            AbilityUnlocker.UnlockAbility(unlockAbility.name);
         }
     }
 }

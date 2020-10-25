@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndPortal : Interactable
 {
     [SerializeField] string unlockedLevelName = null;
+    [SerializeField] string interactScene = "Victory";
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class EndPortal : Interactable
         if (collision.CompareTag("Player"))
         {
             LevelUnlocker.UnlockLevel(unlockedLevelName);
-            SceneManager.LoadScene("Victory");
+            SceneManager.LoadScene(interactScene);
             Debug.Log(LevelUnlocker.UnlockedLevels[1]);
         }
     }

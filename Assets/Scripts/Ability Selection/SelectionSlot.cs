@@ -13,18 +13,51 @@ public class SelectionSlot : MonoBehaviour
     [SerializeField] Image dragImage = null;
     Vector2 dragOffset;
     Camera cam;
+    bool isUnlocked;
 
+    #region Debug Unlock
+    bool canDebugUnlock = false;
+
+    private void LateUpdate()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            canDebugUnlock = !canDebugUnlock;
+        }
+        if (AbilitySelector.hovered == this && Input.GetMouseButtonDown(0))
+        {
+            DebugUnlock();
+        }
+    }
+    public void DebugUnlock()
+    {
+        if (!Debug.isDebugBuild || !canDebugUnlock) { return; }
+        AbilityUnlocker.UnlockAbility(abilityName);
+        isUnlocked = true;
+        DisplayAbilityIcon();
+    }
+    #endregion
     public void Start()
     {
         cam = Camera.main;
-        if (ability)
-            GetComponent<Image>().sprite = ability.icon;
+        isUnlocked = AbilityUnlocker.UnlockedAbilities.Contains(ability.name);
+        if (isUnlocked)
+        {
+            DisplayAbilityIcon();
+        }
+    }
+    void DisplayAbilityIcon()
+    {
+        GetComponent<Image>().sprite = ability.icon;
         dragImage.sprite = ability.icon;
     }
     private void Update()
     {
-        CheckSelection();
-        Drag();
+        if (isUnlocked)
+        {
+            CheckSelection();
+            Drag();
+        }
     }
     void Drag()
     {
