@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     public float maxHP = 100;
     public float currentHealth = 0;
     [SerializeField] bool isInvulnerable = false;
+    [SerializeField] UnityEvent deathEvent = null;
 
     void Start()
     {
@@ -32,5 +34,9 @@ public class Health : MonoBehaviour
     public void StartDeath()
     {
         gameObject.SetActive(false);
+        if (deathEvent != null)
+        {
+            deathEvent.Invoke();
+        }
     }
 }
