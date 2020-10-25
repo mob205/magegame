@@ -9,7 +9,10 @@ public static class LevelUnlocker
 
     public static void UnlockLevel(string levelName)
     {
-        UnlockedLevels.Add(levelName);
+        if (!UnlockedLevels.Contains(levelName))
+        {
+            UnlockedLevels.Add(levelName);
+        }
     }
     public static void SelectLevel(string levelName)
     {

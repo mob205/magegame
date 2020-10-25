@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 4648170875517528368}
   - component: {fileID: 6102275917039676201}
   m_Layer: 5
-  m_Name: Available Ability 3
+  m_Name: Heal Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability: {fileID: 8915784620029004868, guid: d3c9205537dc071429261a0eda0bce0a, type: 3}
   abilityName: Heal
-  description: 'Heals caster for 50 health. Cooldown: 50'
+  description: 'Heals caster for 50 health. Cooldown: 25'
   maxDuplicates: 1
   dragImage: {fileID: 6394583762622126295}
 --- !u!222 &1594294189893820238
@@ -320,7 +320,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Ability Selector
 --- !u!1 &9161103306954656680
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +961,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Drag and drop the ability icons to the selection square on the bottom to
+    choose it. Click 'NEXT' when your loadout is complete. Most abilities can be
+    used multiple times in one loadout. Unlock more abilities in chests.
 --- !u!1 &9161103307463904107
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +978,7 @@ GameObject:
   - component: {fileID: 9161103307463904108}
   - component: {fileID: 9161103307463904109}
   m_Layer: 5
-  m_Name: Available Ability 2
+  m_Name: Laser Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,8 +1020,8 @@ MonoBehaviour:
   abilityName: Laser of Destruction
   description: 'After charging for 2 seconds, channel a laser for 5 seconds that
     damages all enemies in the beam. Slows caster by 50% during channel. Cooldown:
-    20 seconds | Damage per Second: 30'
-  maxDuplicates: 1
+    25 seconds | Damage per Second: 30'
+  maxDuplicates: 0
   dragImage: {fileID: 9161103306982314980}
 --- !u!222 &9161103307463904111
 CanvasRenderer:
@@ -1424,7 +1426,7 @@ GameObject:
   - component: {fileID: 9161103308037008711}
   - component: {fileID: 9161103308037008708}
   m_Layer: 5
-  m_Name: Available Ability 1
+  m_Name: Shield Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1465,7 +1467,7 @@ MonoBehaviour:
   ability: {fileID: 7071389398729726226, guid: 1a306bb9c47a3b54aa74c63ea868ef02, type: 3}
   abilityName: Cast Shield
   description: 'Summons a shield that blocks projectiles from the targeted direction
-    for 5 seconds. Cooldown: 10 seconds.'
+    for 4 seconds. Cooldown: 10 seconds.'
   maxDuplicates: 1
   dragImage: {fileID: 9161103306991967432}
 --- !u!222 &9161103308037008710
@@ -1936,8 +1938,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: LoadScene
-        m_Mode: 5
+        m_MethodName: LoadLevelFromUnlocker
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2467,7 +2469,7 @@ PrefabInstance:
     - target: {fileID: 5846971833705881446, guid: 897f4637e6befa74a82af31a79ae1d34,
         type: 3}
       propertyPath: m_Name
-      value: Available Ability 0
+      value: Fireball Slot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 897f4637e6befa74a82af31a79ae1d34, type: 3}

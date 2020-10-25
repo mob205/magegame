@@ -38,6 +38,7 @@ public class Laser : Ability
         targetTransform = target;
         warmupParticles.Play();
         if (castDebuff) { castDebuff.ApplyBuff(); }
+        StartCooldown();
 
         StartCoroutine(DelayedCast());
     }
@@ -59,6 +60,5 @@ public class Laser : Ability
         Destroy(laserBeam.gameObject);
         warmupParticles.Stop();
         if (castDebuff) { castDebuff.RemoveBuff(); }
-        StartCooldown();
     }
 }

@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu/Menu.unity
+    guid: a8ce389a9ff8e29478e7476285fdd22b
+  - enabled: 1
+    path: Assets/Scenes/Menu/Level Select.unity
+    guid: be90ea65267afb447947efefb0901204
+  - enabled: 1
     path: Assets/Scenes/Menu/Spell Selector.unity
     guid: 77fed3795cb417049aefe102d0da49e6
+  - enabled: 1
+    path: Assets/Scenes/Menu/Victory.unity
+    guid: 67c07be400b7aca45b6fb62418b2c313
   - enabled: 1
     path: Assets/Scenes/Grassland/Grassland(1-1).unity
     guid: 56a0038d16afa9442b107495272120cf

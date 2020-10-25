@@ -358,21 +358,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5777839278736674189, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: description
-      value: 'Heals caster for 50 health. Cooldown: 25'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8412896242985319936, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Heal Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306847603755, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Text
-      value: Ability Selector
-      objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726402, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: m_Name
@@ -483,54 +468,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9161103307385967218, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Text
-      value: Drag and drop the ability icons to the selection square on the bottom
-        to choose it. Click 'NEXT' when your loadout is complete. Most abilities
-        can be used multiple times in one loadout. Unlock more abilities in chests.
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103307463904107, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Laser Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103307927345698, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Fireball Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103307927345702, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: description
-      value: 'Shoots a fireball in the targeted direction. Cooldown: 1 second | Cast
-        Time: 0.5 seconds | Damage: 10 '
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103308037008706, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Name
-      value: Shield Slot
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103308037008713, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: description
-      value: 'Summons a shield that blocks projectiles from the targeted direction
-        for 4 seconds. Cooldown: 10 seconds.'
-      objectReference: {fileID: 0}
     - target: {fileID: 9161103308541356479, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1509725611}
-    - target: {fileID: 9161103308541356479, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadLevelFromUnlocker
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103308541356479, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b96442e2567c9c4f945a47682e43cb9, type: 3}

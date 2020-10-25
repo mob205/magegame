@@ -1701,6 +1701,86 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &524405239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 524405240}
+  - component: {fileID: 524405242}
+  - component: {fileID: 524405241}
+  m_Layer: 5
+  m_Name: Win Con Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &524405240
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524405239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2135612037}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.06, y: 2.85}
+  m_SizeDelta: {x: 15, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &524405241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524405239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.9960785, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 165
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Get to the portal
+
+    at the end of the level to win'
+--- !u!222 &524405242
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524405239}
+  m_CullTransparentMesh: 0
 --- !u!1 &531970463
 GameObject:
   m_ObjectHideFlags: 0
@@ -23145,12 +23225,12 @@ PrefabInstance:
     - target: {fileID: 8718716044578613471, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.17
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8718716044578613471, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.58
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8718716044578613471, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}
@@ -23627,6 +23707,81 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2074615066}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &2135612037 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 724757390, guid: 43be490098e948c469844d3d893ee12c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3323758656361102907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &550102547600881036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 95.154686
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.8306856
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595784, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 550102547941595789, guid: f280acad23aa5534981070606cc6824d,
+        type: 3}
+      propertyPath: m_Name
+      value: End Portal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f280acad23aa5534981070606cc6824d, type: 3}
 --- !u!1001 &873527112127804867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23872,9 +24027,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 566750625, guid: 43be490098e948c469844d3d893ee12c, type: 3}
+      propertyPath: m_Text
+      value: 'Move Right - D
+
+        Move Left - A
+
+        Jump - Space Bar
+
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 724757386, guid: 43be490098e948c469844d3d893ee12c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 724757390, guid: 43be490098e948c469844d3d893ee12c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 913941535, guid: 43be490098e948c469844d3d893ee12c, type: 3}
+      propertyPath: m_Text
+      value: 'Available Abilities
+
+        Cast spells with number keys[1-5]
+
+        or
+        mouse buttons'
       objectReference: {fileID: 0}
     - target: {fileID: 3323758656467374284, guid: 43be490098e948c469844d3d893ee12c,
         type: 3}
