@@ -8,12 +8,13 @@ public class SelectionSlot : MonoBehaviour
     public Ability ability = null;
     public string abilityName = "Ability not assigned";
     [TextArea] public string description = "Ability not assigned";
+    public string unlockLocation = "Grassland(1-1)";
     public int maxDuplicates = 0;
 
     [SerializeField] Image dragImage = null;
     Vector2 dragOffset;
     Camera cam;
-    bool isUnlocked;
+    public bool isUnlocked;
 
     #region Debug Unlock
     bool canDebugUnlock = false;
@@ -53,9 +54,9 @@ public class SelectionSlot : MonoBehaviour
     }
     private void Update()
     {
+        CheckSelection();
         if (isUnlocked)
         {
-            CheckSelection();
             Drag();
         }
     }

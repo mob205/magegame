@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Victory.unity
     guid: 67c07be400b7aca45b6fb62418b2c313
   - enabled: 1
+    path: Assets/Scenes/Menu/Defeat.unity
+    guid: d5c184d9a37ce1d45afdea19348cf7a9
+  - enabled: 1
     path: Assets/Scenes/Grassland/Grassland(1-1).unity
     guid: 56a0038d16afa9442b107495272120cf
   - enabled: 1

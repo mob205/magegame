@@ -156,7 +156,7 @@ RectTransform:
   m_Children:
   - {fileID: 7853946298802661214}
   m_Father: {fileID: 9161103308842053532}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -178,8 +178,10 @@ MonoBehaviour:
   ability: {fileID: 8915784620029004868, guid: d3c9205537dc071429261a0eda0bce0a, type: 3}
   abilityName: Heal
   description: 'Heals caster for 50 health. Cooldown: 25'
+  unlockLocation: Grassland(1-1)
   maxDuplicates: 1
   dragImage: {fileID: 6394583762622126295}
+  isUnlocked: 0
 --- !u!222 &1594294189893820238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -997,7 +999,7 @@ RectTransform:
   m_Children:
   - {fileID: 9161103306982314981}
   m_Father: {fileID: 9161103308842053532}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1021,8 +1023,10 @@ MonoBehaviour:
   description: 'After charging for 2 seconds, channel a laser for 5 seconds that
     damages all enemies in the beam. Slows caster by 50% during channel. Cooldown:
     25 seconds | Damage per Second: 30'
+  unlockLocation: Grassland(1-1)
   maxDuplicates: 0
   dragImage: {fileID: 9161103306982314980}
+  isUnlocked: 0
 --- !u!222 &9161103307463904111
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1468,8 +1472,10 @@ MonoBehaviour:
   abilityName: Cast Shield
   description: 'Summons a shield that blocks projectiles from the targeted direction
     for 4 seconds. Cooldown: 10 seconds.'
+  unlockLocation: Grassland(1-1)
   maxDuplicates: 1
   dragImage: {fileID: 9161103306991967432}
+  isUnlocked: 0
 --- !u!222 &9161103308037008710
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2051,8 +2057,8 @@ RectTransform:
   m_Children:
   - {fileID: 9161103307927345701}
   - {fileID: 9161103308037008709}
-  - {fileID: 9161103307463904106}
   - {fileID: 8807874444471813698}
+  - {fileID: 9161103307463904106}
   m_Father: {fileID: 9161103306972726406}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

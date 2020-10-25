@@ -9,10 +9,11 @@ public class DescriptionUpdater : MonoBehaviour
     [SerializeField] Text nameText = null;
     [SerializeField] Text descText = null;
 
+    Sprite defaultSprite;
     SelectionSlot displayedSlot;
     void Start()
     {
-        
+        defaultSprite = descImage.sprite;
     }
 
     void Update()
@@ -26,8 +27,17 @@ public class DescriptionUpdater : MonoBehaviour
     }
     void UpdateDisplay()
     {
-        descImage.sprite = displayedSlot.ability.icon;
-        nameText.text = displayedSlot.abilityName;
-        descText.text = displayedSlot.description;
+        if (displayedSlot.isUnlocked)
+        {
+            descImage.sprite = displayedSlot.ability.icon;
+            nameText.text = displayedSlot.abilityName;
+            descText.text = displayedSlot.description;
+        }
+        else
+        {
+            descImage.sprite = defaultSprite;
+            nameText.text = "???";
+            descText.text = "This ability is hidden in " + displayedSlot.unlockLocation;
+        }
     }
 }
