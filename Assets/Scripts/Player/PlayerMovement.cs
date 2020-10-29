@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour, IMove {
             Jump();
         }
     }
-    private bool CheckGrounded()
+    public bool CheckGrounded()
     {
         //return Physics2D.Raycast(transform.position, Vector2.down, .6f, groundLayer);
         return Physics2D.BoxCast(transform.position, new Vector2(0.5f,1), 0, Vector2.down, .6f, groundLayer);
