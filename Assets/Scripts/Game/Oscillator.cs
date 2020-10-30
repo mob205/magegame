@@ -30,7 +30,7 @@ public class Oscillator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject == PlayerAbilities.instance.gameObject)
         {
             collision.gameObject.transform.parent = gameObject.transform;
             //originalParents.Add(collision.gameObject, collision.gameObject.transform.parent);
@@ -39,7 +39,7 @@ public class Oscillator : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject == PlayerAbilities.instance.gameObject)
         {
             collision.gameObject.transform.parent = null; 
         }
