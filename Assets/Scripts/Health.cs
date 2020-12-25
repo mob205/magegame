@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     public float maxHP = 100;
     public float currentHealth = 0;
+    public float damageModifier = 1;
     [SerializeField] bool isInvulnerable = false;
     [SerializeField] UnityEvent deathEvent = null;
 
@@ -19,7 +20,7 @@ public class Health : MonoBehaviour
     {
         if(isInvulnerable) { return; }
 
-        currentHealth -= amount;
+        currentHealth -= amount * damageModifier;
         if (currentHealth <= 0)
         {
             StartDeath();

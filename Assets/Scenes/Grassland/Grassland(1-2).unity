@@ -216,7 +216,7 @@ PrefabInstance:
     - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
         type: 3}
@@ -1030,7 +1030,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &672299044
 PrefabInstance:
@@ -1116,7 +1116,7 @@ PrefabInstance:
     - target: {fileID: 1193504884935344523, guid: b81e0b113bae53743b1dc1028efb2d01,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1193504884935344523, guid: b81e0b113bae53743b1dc1028efb2d01,
         type: 3}
@@ -1247,7 +1247,7 @@ PrefabInstance:
     - target: {fileID: 1853198556108505039, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1853198556108505039, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
@@ -1849,7 +1849,7 @@ Transform:
   - {fileID: 934236639}
   - {fileID: 1104029425}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &934236639 stripped
 Transform:
@@ -5597,6 +5597,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6345644626189496498, guid: 6e23c844587d8094b9b91e34458c2824,
+        type: 3}
+      propertyPath: damageModifier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6345644626189496498, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}
       propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
