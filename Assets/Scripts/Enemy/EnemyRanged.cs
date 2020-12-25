@@ -5,13 +5,12 @@ using UnityEngine;
 public class EnemyRanged : MonoBehaviour
 {
     [SerializeField] float castDelay = 1f;
-    [SerializeField] float aggroRange = 10f;
+    [SerializeField] float aggroRange = 1f;
 
     Ability[] abilities = new Ability[5];
     private bool isCasting;
     float remainingCT;
     GameObject player;
-    bool isAggro;
 
     void Awake()
     {
@@ -25,18 +24,6 @@ public class EnemyRanged : MonoBehaviour
     {
         UpdateCastTime();
         CastAbilities();
-        CheckAggro();
-    }
-    void CheckAggro()
-    {
-        if(Vector2.Distance(transform.position, player.transform.position) <= aggroRange)
-        {
-            isAggro = true;
-        }
-        else
-        {
-            isAggro = false;
-        }
     }
     private void UpdateCastTime()
     {
@@ -50,6 +37,7 @@ public class EnemyRanged : MonoBehaviour
     }
     private void CastAbilities()
     {
+        var isAggro = Vector2.Distance(transform.position, player.transform.position) <= aggroRange;
         if (isAggro && !isCasting)
         {
             var random = Random.Range(0, abilities.Length);

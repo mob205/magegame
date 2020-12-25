@@ -666,6 +666,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 419.10635
       objectReference: {fileID: 0}
@@ -681,6 +686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -693,16 +703,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1924662465067750651, guid: 4111ea4b0214821448e3d8591c9a39fe,
         type: 3}
@@ -736,7 +736,7 @@ PrefabInstance:
     - target: {fileID: 5777839278736674189, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: unlockLocation
-      value: Grassland(1-2)
+      value: Grassland(1-X)
       objectReference: {fileID: 0}
     - target: {fileID: 8807874444471813698, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
@@ -760,6 +760,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -772,6 +817,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
@@ -790,13 +840,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 1
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
@@ -813,62 +863,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103306972726406, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9161103307385967218, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: m_Text
-      value: Drag and drop the ability icons to the selection squares on the bottom
-        to select it. Click 'NEXT' when your loadout is complete. Most abilities
-        can be used multiple times in one loadout. Unlock more abilities in chests.
+      value: Drag and drop the ability icons to the selection squares on the bottom.
+        Click 'NEXT' when your loadout is complete. Most abilities can be used multiple
+        times in one loadout. Unlock more abilities in levels.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103307385967218, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161103307385967218, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9161103307385967220, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
@@ -888,12 +898,12 @@ PrefabInstance:
     - target: {fileID: 9161103307463904110, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: unlockLocation
-      value: Grassland(1-3)
+      value: Grassland(1-X)
       objectReference: {fileID: 0}
     - target: {fileID: 9161103308037008713, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: unlockLocation
-      value: Grassland(1-2)
+      value: Grassland(1-1)
       objectReference: {fileID: 0}
     - target: {fileID: 9161103308477699209, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}

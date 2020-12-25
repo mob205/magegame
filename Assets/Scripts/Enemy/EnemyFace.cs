@@ -13,7 +13,7 @@ public class EnemyFace : MonoBehaviour
 
     void Update()
     {
-        var rotAngle = 0;
+        int rotAngle;
         if((player.position.x - transform.position.x) > 0)
         {
             rotAngle = 0;
