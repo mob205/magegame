@@ -1036,6 +1036,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6345644626189496498, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}
+      propertyPath: isInvulnerable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6345644626189496498, guid: 6e23c844587d8094b9b91e34458c2824,
+        type: 3}
       propertyPath: deathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 65753407}
