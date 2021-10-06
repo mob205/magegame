@@ -9093,7 +9093,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -23607,11 +23607,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chest Object
-      objectReference: {fileID: 0}
-    - target: {fileID: 5486367464326080963, guid: c6faa265e66125f4db5266e80347e42a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6faa265e66125f4db5266e80347e42a, type: 3}

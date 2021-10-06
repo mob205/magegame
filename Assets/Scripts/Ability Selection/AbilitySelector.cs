@@ -11,6 +11,14 @@ public class AbilitySelector : MonoBehaviour
 
     public static Ability[] selectedAbilities = new Ability[5];
 
+    private void Start()
+    {
+        for (int i = 0; i < selectedAbilities.Length; i++)
+        {
+            if (selectedAbilities[i])
+                abilitySlots[i].SetAbility(selectedAbilities[i]);
+        }
+    }
     void Update()
     {
         SelectSlot();

@@ -19,23 +19,23 @@ public class ProtoAbilitySlot : MonoBehaviour
         // Checks for mouse release when there is a dragged Slot in the drop range.
         if (Input.GetMouseButtonUp(0) && hoveredSlot != null)
         {
-            currentAbility = hoveredSlot.ability;
-            if (IsAllowedDuplicate(currentAbility, hoveredSlot.maxDuplicates))
+            if (IsAllowedDuplicate(hoveredSlot.ability, hoveredSlot.maxDuplicates))
             {
-                slotImage.sprite = currentAbility.icon;
-            }
-            else
-            {
-                ResetSlot();
+                SetAbility(hoveredSlot.ability);
             }
         }
+    }
+    public void SetAbility(Ability ability)
+    {
+        currentAbility = ability;
+        slotImage.sprite = ability.icon;
     }
     bool IsAllowedDuplicate(Ability abilityToAdd, int maxDuplicates)
     {
         var timesFound = 0;
         for (int i = 0; i < AbilitySelector.selectedAbilities.Length; i++)
         {
-            if (AbilitySelector.selectedAbilities[i] == currentAbility)
+            if (AbilitySelector.selectedAbilities[i] == abilityToAdd)
             {
                 timesFound++;
             }
