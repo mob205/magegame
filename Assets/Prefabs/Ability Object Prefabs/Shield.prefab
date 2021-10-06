@@ -67,4 +67,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   isApplied: 0
-  modifier: 0.5
+  modifier: 0.66
