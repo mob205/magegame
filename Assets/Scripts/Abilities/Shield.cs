@@ -7,12 +7,12 @@ public class Shield : Ability
     [SerializeField] float shieldDuration = 5;
     [SerializeField] GameObject shieldObject = null;
     [SerializeField] float followDist = 2;
-    Buff castBuff;
+    [SerializeField] ScriptableBuff castBuff;
 
+    BuffableEntity buffTarget;
     private void Start()
     {
-        castBuff = GetComponent<Buff>();
-        castBuff.target = GetComponentInParent<Buffable>();
+        buffTarget = GetComponentInParent<BuffableEntity>();
     }
     public override void CastAbility(Transform target)
     {
@@ -31,19 +31,11 @@ public class Shield : Ability
 
         if (castBuff)
         {
-            castBuff.ApplyBuff();
-            Debug.Log("Buff applied");
-            StartCoroutine(DelayedRemoveBuff());
+            buffTarget.AddBuff(castBuff.InitializeBuff(buffTarget.gameObject));
         }
 
         Destroy(shieldInstance, shieldDuration);
 
         StartCooldown();
-    }
-    IEnumerator DelayedRemoveBuff()
-    {
-        yield return new WaitForSeconds(shieldDuration);
-        castBuff.RemoveBuff();
-        Debug.Log("Buff removed");
     }
 }
