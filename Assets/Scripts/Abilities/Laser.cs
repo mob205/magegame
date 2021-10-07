@@ -8,18 +8,18 @@ public class Laser : Ability
     [SerializeField] float damagePerTick = 10;
     [SerializeField] int ticksPerSecond = 1;
     [SerializeField] LaserBeam laserPrefab = null;
+    [SerializeField] ScriptableBuff castDebuff;
 
+    BuffableEntity debuffTarget;
     LaserBeam laserBeam;
     ParticleSystem warmupParticles;
     Camera mainCamera;
-    Buff castDebuff;
     Transform targetTransform;
     void Start()
     {
         warmupParticles = GetComponent<ParticleSystem>();
         mainCamera = Camera.main;
-        castDebuff = GetComponent<Buff>();
-        castDebuff.target = GetComponentInParent<Buffable>();
+        debuffTarget = GetComponentInParent<BuffableEntity>();
     }
     protected override void Update()
     {
@@ -37,7 +37,11 @@ public class Laser : Ability
     {
         targetTransform = target;
         warmupParticles.Play();
-        if (castDebuff) { castDebuff.ApplyBuff(); }
+        if (castDebuff)
+        {
+            castDebuff.Duration = castTime;
+            debuffTarget.AddBuff(castDebuff.InitializeBuff(debuffTarget.gameObject));
+        }
         StartCooldown();
 
         StartCoroutine(DelayedCast());
@@ -59,6 +63,5 @@ public class Laser : Ability
 
         Destroy(laserBeam.gameObject);
         warmupParticles.Stop();
-        if (castDebuff) { castDebuff.RemoveBuff(); }
     }
 }

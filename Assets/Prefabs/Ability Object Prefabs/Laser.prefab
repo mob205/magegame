@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 4974267808699261041}
   - component: {fileID: 4974267808699261040}
   - component: {fileID: 4974267808699261043}
-  - component: {fileID: 96563986}
   m_Layer: 0
-  m_Name: Laser Object
+  m_Name: Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,6 +54,7 @@ MonoBehaviour:
   damagePerTick: 10
   ticksPerSecond: 3
   laserPrefab: {fileID: 191105912, guid: 3b0d87c500f8604469796f999df5468d, type: 3}
+  castDebuff: {fileID: 11400000, guid: 3151e2d55b6567a4080ed9757758af31, type: 2}
 --- !u!198 &4974267808699261040
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4777,18 +4777,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &96563986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4974267808699261042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62c67a0d7f4f753498de44698d0ecb9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  isApplied: 0
-  modifier: 0.5
