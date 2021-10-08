@@ -9,6 +9,7 @@ public class PlayerAbilities : MonoBehaviour, ICaster
 
     private bool isCasting;
     public bool CanCast { get; set; } = true;
+    public float DamageModifier { get; set; } = 1;
     float remainingCT;
     public static Ability[] Abilities { get; private set; } = new Ability[5];
 

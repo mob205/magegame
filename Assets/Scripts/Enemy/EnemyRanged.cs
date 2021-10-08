@@ -12,6 +12,7 @@ public class EnemyRanged : MonoBehaviour, ICaster
     float remainingCT;
     GameObject player;
     public bool CanCast { get; set; } = true;
+    public float DamageModifier { get; set; } = 1;
 
     void Awake()
     {

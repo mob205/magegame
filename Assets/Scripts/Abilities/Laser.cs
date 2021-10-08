@@ -13,12 +13,10 @@ public class Laser : Ability
     BuffableEntity debuffTarget;
     LaserBeam laserBeam;
     ParticleSystem warmupParticles;
-    Camera mainCamera;
     Transform targetTransform;
     void Start()
     {
         warmupParticles = GetComponent<ParticleSystem>();
-        mainCamera = Camera.main;
         debuffTarget = GetComponentInParent<BuffableEntity>();
     }
     protected override void Update()
@@ -52,7 +50,7 @@ public class Laser : Ability
         yield return new WaitForSeconds(warmupDuration);
 
         laserBeam = Instantiate(laserPrefab, transform.position, Quaternion.identity, transform);
-        laserBeam.damagePerTick = damagePerTick;
+        laserBeam.damagePerTick = damagePerTick * debuffTarget.GetComponent<ICaster>().DamageModifier;
         laserBeam.ticksPerSecond = ticksPerSecond;
         laserBeam.caster = gameObject;
         laserBeam.tag = gameObject.tag;

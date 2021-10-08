@@ -27,7 +27,8 @@ public class Freeze : Ability
 
             if (hitHealth)
             {
-                hitHealth.Damage(damage);
+                var modifiedDamage = damage * caster.GetComponent<ICaster>().DamageModifier;
+                hitHealth.Damage(modifiedDamage);
             }
 
             if (buffableEntity) 

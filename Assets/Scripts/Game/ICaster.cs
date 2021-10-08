@@ -5,5 +5,5 @@ using UnityEngine;
 public interface ICaster
 {
     bool CanCast { get; set; }
-
+    float DamageModifier { get; set; }
 }
