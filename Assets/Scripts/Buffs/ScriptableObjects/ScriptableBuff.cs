@@ -13,6 +13,8 @@ public abstract class ScriptableBuff : ScriptableObject
      */
     public bool IsDurationStacked;
 
+    public bool IsRefreshStacked;
+
     /**
      * Effect value is increased each time the buff is applied.
      */

@@ -35,10 +35,14 @@ public abstract class TimedBuff
             ApplyEffect();
             EffectStacks++;
         }
-        
+
         if (Buff.IsDurationStacked || Duration <= 0)
         {
             Duration += Buff.Duration;
+        }
+        else if (Buff.IsRefreshStacked)
+        {
+            Duration = Buff.Duration;
         }
     }
     protected abstract void ApplyEffect();

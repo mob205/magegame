@@ -60,7 +60,6 @@ public class PlayerAbilities : MonoBehaviour
                 {
                     StartCastTime(Abilities[i].CastTime);
                 }
-                Debug.Log("Casting Ability" + i);
             }
         }
     }

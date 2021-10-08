@@ -7,27 +7,36 @@ public class Freeze : Ability
     [SerializeField] float damage;
     [SerializeField] float freezeDuration;
     [SerializeField] float radius;
-    [SerializeField] Buff freezeBuff;
+    [SerializeField] ScriptableBuff freezeBuff;
 
+    GameObject caster;
+    ParticleSystem particles;
+    private void Start()
+    {
+        caster = transform.parent.gameObject;
+        particles = GetComponent<ParticleSystem>();
+    }
     public override void CastAbility(Transform target)
     {
         var hits = Physics2D.OverlapCircleAll(transform.position, radius);
         foreach(var hit in hits)
         {
-            if(hit.tag == gameObject.tag) { return; }
+            if(caster.CompareTag(hit.tag)) { continue; }
             var hitHealth = hit.GetComponent<Health>();
-            var hitBuff = hit.GetComponent<Buffable>();
+            var buffableEntity = hit.GetComponent<BuffableEntity>();
 
             if (hitHealth)
             {
                 hitHealth.Damage(damage);
             }
 
-            if (hitBuff) 
+            if (buffableEntity) 
             {
-                freezeBuff.target = hitBuff;
-                freezeBuff.ApplyBuff();
+                freezeBuff.Duration = freezeDuration;
+                buffableEntity.AddBuff(freezeBuff.InitializeBuff(buffableEntity.gameObject));
             }
         }
+        StartCooldown();
+        particles.Play();
     }
 }

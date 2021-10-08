@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Duration: 4
   IsDurationStacked: 0
-  IsEffectStacked: 1
-  DefenseModifier: 0.5
+  IsRefreshStacked: 1
+  IsEffectStacked: 0
+  DefenseModifier: 0.66
