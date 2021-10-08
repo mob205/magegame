@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAbilities : MonoBehaviour
+public class PlayerAbilities : MonoBehaviour, ICaster
 {
+
     public static PlayerAbilities instance;
 
     private bool isCasting;
+    public bool CanCast { get; set; } = true;
     float remainingCT;
     public static Ability[] Abilities { get; private set; } = new Ability[5];
 
@@ -51,6 +53,7 @@ public class PlayerAbilities : MonoBehaviour
     // Iterate through every active ability. Cast ability if has active input.
     private void CastAbilities()
     {
+        if (!CanCast) { return; }
         for (int i = 0; i < Abilities.Length; i++)
         {
             if (Input.GetAxisRaw("Ability" + i) == 1 && !isCasting && !Abilities[i].activeCooldown)  

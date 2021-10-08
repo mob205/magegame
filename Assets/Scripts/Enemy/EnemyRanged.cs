@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRanged : MonoBehaviour
+public class EnemyRanged : MonoBehaviour, ICaster
 {
     [SerializeField] float castDelay = 1f;
     [SerializeField] float aggroRange = 1f;
@@ -11,6 +11,7 @@ public class EnemyRanged : MonoBehaviour
     private bool isCasting;
     float remainingCT;
     GameObject player;
+    public bool CanCast { get; set; } = true;
 
     void Awake()
     {
@@ -37,6 +38,7 @@ public class EnemyRanged : MonoBehaviour
     }
     private void CastAbilities()
     {
+        if (!CanCast) { return; }
         var isAggro = Vector2.Distance(transform.position, player.transform.position) <= aggroRange;
         if (isAggro && !isCasting)
         {
