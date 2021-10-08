@@ -16,3 +16,5 @@ MonoBehaviour:
   IsDurationStacked: 0
   IsRefreshStacked: 1
   IsEffectStacked: 0
+  ImmobilizedParticles: {fileID: 568922625601763043, guid: cecd9d308263bd845a458d784c09d1fb,
+    type: 3}
