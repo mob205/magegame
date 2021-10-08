@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ae5573beb9f12498cde2893498aa8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 8
+  cooldown: 12
   castTime: 0
   icon: {fileID: 21300000, guid: 1d21cb6b13bd3f74da28e4a7e45d7685, type: 3}
   activeCooldown: 0
