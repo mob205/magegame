@@ -362,6 +362,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1509725611}
+    - target: {fileID: 4500772356684623341, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: description
+      value: 'Freezes all nearby enemies for 3 seconds. Damage: 8 | Cooldown: 12
+        seconds'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500772356684623341, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: unlockLocation
+      value: Grassland(1-4)
+      objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726402, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: m_Name
