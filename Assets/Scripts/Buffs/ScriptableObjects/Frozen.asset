@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abddf4e94b417ae489f707e880431d4c, type: 3}
   m_Name: Frozen
   m_EditorClassIdentifier: 
-  Duration: 3
-  IsDurationStacked: 1
+  Duration: 2
+  IsDurationStacked: 0
   IsRefreshStacked: 1
   IsEffectStacked: 0
   ImmobilizedParticles: {fileID: 568922625601763043, guid: cecd9d308263bd845a458d784c09d1fb,

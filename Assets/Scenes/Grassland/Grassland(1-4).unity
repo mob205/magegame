@@ -386,6 +386,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6faa265e66125f4db5266e80347e42a, type: 3}
+--- !u!4 &122943401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5486367464326080962, guid: c6faa265e66125f4db5266e80347e42a,
+    type: 3}
+  m_PrefabInstance: {fileID: 122943400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &241009749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -756,6 +762,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Frost Mage (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 558413322999426517, guid: eabf1ee13992ce24aa712a5d6a57e85a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eabf1ee13992ce24aa712a5d6a57e85a, type: 3}
@@ -73323,6 +73334,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1193504884935344526, guid: b81e0b113bae53743b1dc1028efb2d01,
+        type: 3}
+      propertyPath: openObject
+      value: 
+      objectReference: {fileID: 122943401}
     - target: {fileID: 1193504884935344526, guid: b81e0b113bae53743b1dc1028efb2d01,
         type: 3}
       propertyPath: unlockAbility
