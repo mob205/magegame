@@ -79301,27 +79301,27 @@ PrefabInstance:
     - target: {fileID: 1560644618340047772, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1560644619677136914, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1560644620304811015, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1560644620336412244, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1853198555716931144, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1853198556108505027, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
@@ -79331,7 +79331,7 @@ PrefabInstance:
     - target: {fileID: 1853198556108505027, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1853198556108505039, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
@@ -79441,12 +79441,12 @@ PrefabInstance:
     - target: {fileID: 6906799861647243306, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6906799861647243306, guid: ec03400ac03315d42a90c1342d606211,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec03400ac03315d42a90c1342d606211, type: 3}

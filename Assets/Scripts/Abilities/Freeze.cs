@@ -21,7 +21,7 @@ public class Freeze : Ability
         var hits = Physics2D.OverlapCircleAll(transform.position, radius);
         foreach(var hit in hits)
         {
-            if(caster.CompareTag(hit.tag)) { continue; }
+            if (caster.CompareTag(hit.tag) || !hit.isTrigger) { continue; }
             var hitHealth = hit.GetComponent<Health>();
             var buffableEntity = hit.GetComponent<BuffableEntity>();
 
