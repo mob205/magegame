@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Frozen
   m_EditorClassIdentifier: 
   Duration: 3
-  IsDurationStacked: 0
+  IsDurationStacked: 1
   IsRefreshStacked: 1
   IsEffectStacked: 0
   ImmobilizedParticles: {fileID: 568922625601763043, guid: cecd9d308263bd845a458d784c09d1fb,

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFollow : MonoBehaviour
+public class EnemyFollow : MonoBehaviour, IMove
 {
     [SerializeField] float followRange = 20f;
     [SerializeField] float followDist = 1f;
@@ -10,6 +10,8 @@ public class EnemyFollow : MonoBehaviour
 
     Rigidbody2D rb;
     PlayerAbilities player;
+
+    public bool CanMove { get; set; } = true;
     void Start()
     {
         player = PlayerAbilities.instance;
@@ -18,6 +20,7 @@ public class EnemyFollow : MonoBehaviour
 
     void Update()
     {
+        if (!CanMove) { return; }
         var dist = Vector2.Distance(transform.position, player.transform.position);
         if (dist <= followRange && (dist >= followDist))
         {

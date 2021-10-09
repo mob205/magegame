@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour, IMove {
 
     [SerializeField] public float movementSpeed = 7;
     public float MoveSpeed
@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour {
         get { return movementSpeed; }
         set { movementSpeed = value; }
     }
+    public bool CanMove { get; set; } = true;
     [SerializeField] public float jumpForce = 5;
 
     Rigidbody2D _rb;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (!CanMove) { return; }
         ProcessMovement();
         if (Input.GetKeyDown(KeyCode.Space))
         {
