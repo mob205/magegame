@@ -16,5 +16,6 @@ public class OnFire : Ability
     {
         buffTarget.AddBuff(damageBoostBuff.InitializeBuff(buffTarget.gameObject));
         buffTarget.AddBuff(unstoppableBuff.InitializeBuff(buffTarget.gameObject));
+        StartCooldown();
     }
 }
