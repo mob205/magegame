@@ -34,4 +34,5 @@ public class BuffableEntity: MonoBehaviour
             buff.Activate();
         }
     }
+    public TimedBuff[] GetBuffs() => _buffs.Values.ToArray();
 }

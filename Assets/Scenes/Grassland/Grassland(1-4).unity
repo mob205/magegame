@@ -757,16 +757,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Frost Mage (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2366821537040650474, guid: eabf1ee13992ce24aa712a5d6a57e85a,
-        type: 3}
-      propertyPath: radius
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2366821537040650474, guid: eabf1ee13992ce24aa712a5d6a57e85a,
-        type: 3}
-      propertyPath: castTime
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eabf1ee13992ce24aa712a5d6a57e85a, type: 3}
 --- !u!4 &703073008 stripped

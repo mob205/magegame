@@ -233,6 +233,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3190057885251222797, guid: a31e98b92d11f5243b85993b1fe4de0e,
         type: 3}
+      propertyPath: castTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190057885251222797, guid: a31e98b92d11f5243b85993b1fe4de0e,
+        type: 3}
       propertyPath: freezeDuration
       value: 2
       objectReference: {fileID: 0}

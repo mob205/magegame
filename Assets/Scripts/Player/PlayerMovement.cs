@@ -27,7 +27,11 @@ public class PlayerMovement : MonoBehaviour, IMove {
 	// Update is called once per frame
 	void Update ()
     {
-        if (!CanMove) { return; }
+        if (!CanMove)
+        {
+            _rb.velocity = Vector2.zero;
+            return; 
+        }
         ProcessMovement();
         if (Input.GetKeyDown(KeyCode.Space))
         {

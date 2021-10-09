@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjects;
 
-public class ImmobileBuff : TickBuff
+public class ImmobileBuff : TimedBuff
 {
     private readonly Rigidbody2D _rb;
     private readonly ICaster _caster;
@@ -29,9 +29,5 @@ public class ImmobileBuff : TickBuff
         if(_caster != null) { _caster.CanCast = true; }
         if(_movement != null) { _movement.CanMove = true; }
         EffectStacks = 0;
-    }
-    protected override void ApplyTickEffect()
-    {
-        _rb.velocity = Vector2.zero;
     }
 }

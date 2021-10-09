@@ -10,7 +10,7 @@ public class ProtoAbilitySlot : MonoBehaviour
     Image slotImage = null;
     [SerializeField] Sprite defaultImage = null;
 
-    private void Start()
+    public void Awake()
     {
         slotImage = GetComponent<Image>();
     }

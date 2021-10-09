@@ -20,7 +20,11 @@ public class EnemyFollow : MonoBehaviour, IMove
 
     void Update()
     {
-        if (!CanMove) { return; }
+        if (!CanMove)
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
         var dist = Vector2.Distance(transform.position, player.transform.position);
         if (dist <= followRange && (dist >= followDist))
         {
