@@ -6834,9 +6834,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1639958850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23944508c99e1ca43b54cded03995420, type: 3}
+  m_Script: {fileID: 11500000, guid: 46b701529f3701d488ff2ec9890d6fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ticksPerSecond: 1
+  damagePerTick: 99999
 --- !u!4 &1714238027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5486367464326080962, guid: c6faa265e66125f4db5266e80347e42a,

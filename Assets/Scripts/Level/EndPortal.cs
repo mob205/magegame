@@ -8,10 +8,6 @@ public class EndPortal : Interactable
     [SerializeField] string unlockedLevelName = null;
     [SerializeField] string interactScene = "Victory";
 
-    void Start()
-    {
-        
-    }
     public override void Interact(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -20,9 +16,5 @@ public class EndPortal : Interactable
             SceneManager.LoadScene(interactScene);
             Debug.Log(LevelUnlocker.UnlockedLevels[1]);
         }
-    }
-    void Update()
-    {
-        
     }
 }

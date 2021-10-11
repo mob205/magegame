@@ -367,11 +367,21 @@ PrefabInstance:
       value: 'Launch into the air, then slowly glide back down to the ground. Cooldown:
         10 seconds.'
       objectReference: {fileID: 0}
+    - target: {fileID: 4177639922944842917, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: maxDuplicates
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4500772356684623341, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: description
       value: 'Freezes all nearby enemies for 3 seconds. Damage: 8 | Cooldown: 12
         seconds'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500772356684623341, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: maxDuplicates
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4500772356684623341, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
