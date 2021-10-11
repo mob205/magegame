@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public static string CurrentScene { get; private set; }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += SetCurrentScene;
+    }
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -20,15 +25,8 @@ public class SceneChanger : MonoBehaviour
             SceneManager.LoadScene("Spell Selector");
         }
     }
-    // Start is called before the first frame update
-    void Start()
+    private void SetCurrentScene(Scene scene, LoadSceneMode mode)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        CurrentScene = scene.name;
     }
 }

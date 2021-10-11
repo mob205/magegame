@@ -509,6 +509,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enchanted Sword (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
       propertyPath: followRange
@@ -608,6 +613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
       propertyPath: moveSpeed
@@ -686,6 +696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enchanted Sword (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
@@ -1031,6 +1046,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enchanted Sword (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
       propertyPath: followRange
@@ -1110,6 +1130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enchanted Sword (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
@@ -1370,6 +1395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enchanted Sword (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
@@ -51511,6 +51541,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enchanted Sword (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
       propertyPath: followRange
@@ -51584,6 +51619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enchanted Sword (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa9e404aff1647a48ac3eb46c762287a, type: 3}
@@ -51734,6 +51774,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enchanted Sword (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772782, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
       propertyPath: followRange
@@ -51807,6 +51852,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enchanted Sword (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa9e404aff1647a48ac3eb46c762287a, type: 3}
@@ -51910,7 +51960,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -79660,7 +79710,7 @@ PrefabInstance:
     - target: {fileID: 6844958032505772770, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.049513
+      value: -19.4
       objectReference: {fileID: 0}
     - target: {fileID: 6844958032505772770, guid: aa9e404aff1647a48ac3eb46c762287a,
         type: 3}
@@ -79706,6 +79756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enchanted Sword (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa9e404aff1647a48ac3eb46c762287a, type: 3}
@@ -79786,6 +79841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enchanted Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 6844958032505772774, guid: aa9e404aff1647a48ac3eb46c762287a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa9e404aff1647a48ac3eb46c762287a, type: 3}
