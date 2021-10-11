@@ -5,14 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class EndPortal : Interactable
 {
-    [SerializeField] string unlockedLevelName = null;
+    [SerializeField] string[] unlockedLevelNames = null;
     [SerializeField] string interactScene = "Victory";
 
     public override void Interact(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            LevelUnlocker.UnlockLevel(unlockedLevelName);
+            foreach(var level in unlockedLevelNames)
+            {
+                LevelUnlocker.UnlockLevel(level);
+            }
             SceneManager.LoadScene(interactScene);
             Debug.Log(LevelUnlocker.UnlockedLevels[1]);
         }

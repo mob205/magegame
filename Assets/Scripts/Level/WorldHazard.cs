@@ -16,7 +16,6 @@ public class WorldHazard : MonoBehaviour
     {
         if (collision.isTrigger && collision.CompareTag("Player")) 
         {
-            Debug.Log($"{name}");
             var health = collision.GetComponent<Health>();
             if(health && _canDamage)
             {
