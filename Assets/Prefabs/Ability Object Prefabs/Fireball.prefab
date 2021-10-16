@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 743392030061101791}
   - component: {fileID: 743392030061101790}
   m_Layer: 9
-  m_Name: Fireball Object
+  m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,5 +51,5 @@ MonoBehaviour:
   projectile: {fileID: 8221297744530416966, guid: 239931585b8acc142b6f702569b6361a,
     type: 3}
   projectileDamage: 10
-  projectileLifetime: 4
+  projectileLifetime: 3
   projectileSpeed: 15
