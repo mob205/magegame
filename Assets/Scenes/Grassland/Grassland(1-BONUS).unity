@@ -1521,6 +1521,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal(1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6824241460514423583, guid: 2b096383d80d50947a56a02256dabd85,
+        type: 3}
+      propertyPath: teleportLocation
+      value: 
+      objectReference: {fileID: 73812757}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b096383d80d50947a56a02256dabd85, type: 3}
 --- !u!4 &967326372 stripped
@@ -1865,6 +1870,78 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 928423341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1351110176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351110179}
+  - component: {fileID: 1351110178}
+  - component: {fileID: 1351110177}
+  m_Layer: 0
+  m_Name: Death Box
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1351110177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351110176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46b701529f3701d488ff2ec9890d6fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ticksPerSecond: 1
+  damagePerTick: 99999
+--- !u!61 &1351110178
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351110176}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 200, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1351110179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351110176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50, y: -9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1364990301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3415,7 +3492,7 @@ PrefabInstance:
     - target: {fileID: 1393709521935037305, guid: 90776a21511a48f479212dabb2244452,
         type: 3}
       propertyPath: damageModifier
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1393709521935037307, guid: 90776a21511a48f479212dabb2244452,
         type: 3}
@@ -3531,7 +3608,12 @@ PrefabInstance:
     - target: {fileID: 558413322999426512, guid: eabf1ee13992ce24aa712a5d6a57e85a,
         type: 3}
       propertyPath: damageModifier
-      value: 0.75
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 558413322999426513, guid: eabf1ee13992ce24aa712a5d6a57e85a,
+        type: 3}
+      propertyPath: aggroRange
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 558413322999426514, guid: eabf1ee13992ce24aa712a5d6a57e85a,
         type: 3}
@@ -3947,7 +4029,7 @@ PrefabInstance:
     - target: {fileID: 8217322956222606064, guid: 5920d977a81358847bc7b02fbfcaf6c6,
         type: 3}
       propertyPath: damagePerTick
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8217322956222606064, guid: 5920d977a81358847bc7b02fbfcaf6c6,
         type: 3}

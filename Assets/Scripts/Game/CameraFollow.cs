@@ -9,11 +9,16 @@ public class CameraFollow : MonoBehaviour
 
     PlayerAbilities player;
     Camera cam;
-    Vector2 minBounds, maxBounds;
     void Start()
     {
         player = PlayerAbilities.instance;
         cam = GetComponent<Camera>();
+        StartCoroutine(DelayedResetCamera());
+    }
+    private IEnumerator DelayedResetCamera()
+    {
+        yield return 0;
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
     }
     void FixedUpdate()
     {
