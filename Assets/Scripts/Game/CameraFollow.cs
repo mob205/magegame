@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     {
         player = PlayerAbilities.instance;
         cam = GetComponent<Camera>();
-        StartCoroutine(DelayedResetCamera());
+        CenterCamera();
     }
     private IEnumerator DelayedResetCamera()
     {
@@ -23,6 +23,18 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         FollowPlayer();
+    }
+    public void SetViewbox(BoxCollider2D viewBox)
+    {
+        this.viewBox = viewBox;
+    }
+    public void SetCameraSize(float size)
+    {
+        cam.orthographicSize = size;
+    }
+    public void CenterCamera()
+    {
+        StartCoroutine(DelayedResetCamera());
     }
     void FollowPlayer()
     {
@@ -41,5 +53,7 @@ public class CameraFollow : MonoBehaviour
 
         // Smoothly move camera to calculated position. Vector3 Lerp (vs 2) to preserve camera's z offset.
         transform.position = Vector3.Lerp(transform.position, new Vector3(x, y, transform.position.z), smoothing);
+
+        Debug.Log($"Camera size is currently {cameraHalfX * 2} by {cam.orthographicSize * 2}");
     }
 }
