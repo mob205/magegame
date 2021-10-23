@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class BossRoom : MonoBehaviour
 {
@@ -11,6 +11,7 @@ public class BossRoom : MonoBehaviour
 
     [SerializeField] private float roomCamSize;
     [SerializeField] GameObject bossHealthBar;
+    [SerializeField] UnityEvent bossDeathEvent = null;
 
     private void Start()
     {
@@ -24,7 +25,15 @@ public class BossRoom : MonoBehaviour
             cam.SetViewbox(roomBounds);
             cam.SetCameraSize(roomCamSize);
             cam.CenterCamera();
+            bossHealthBar.SetActive(true);
             isActive = true;
+        }
+    }
+    public void OnBossDeath()
+    {
+        if(bossDeathEvent != null)
+        {
+            bossDeathEvent.Invoke();
         }
     }
 }

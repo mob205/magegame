@@ -17,7 +17,6 @@ public class EndPortal : Interactable
                 LevelUnlocker.UnlockLevel(level);
             }
             SceneManager.LoadScene(interactScene);
-            Debug.Log(LevelUnlocker.UnlockedLevels[1]);
         }
     }
 }
