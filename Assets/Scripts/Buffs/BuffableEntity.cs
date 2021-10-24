@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class BuffableEntity: MonoBehaviour
 {
+    [SerializeField] ScriptableBuff[] startingBuffs;
     private readonly Dictionary<ScriptableBuff, TimedBuff> _buffs = new Dictionary<ScriptableBuff, TimedBuff>();
-    
+    private void Start()
+    {
+        foreach(var buff in startingBuffs)
+        {
+            AddBuff(buff.InitializeBuff(gameObject));
+        }
+    }
     void Update()
     {
         //OPTIONAL, return before updating each buff if game is paused
