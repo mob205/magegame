@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag(caster.tag)) 
+        if (caster == null || !collision.CompareTag(caster.tag)) 
         {
             var hitHealth = collision.GetComponent<Health>();
             var hitBuffable = collision.GetComponent<BuffableEntity>();
