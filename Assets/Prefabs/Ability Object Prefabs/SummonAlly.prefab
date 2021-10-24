@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 15
   castTime: 1
-  icon: {fileID: -9008750870689847258, guid: d62d37ee1cbc6af4880814bd51d8920c, type: 3}
+  icon: {fileID: 21300000, guid: ad7ebbd5ddaec5e48b5a4b65192d7a1b, type: 3}
   activeCooldown: 0
   remainingCD: 0
   allyDuration: 15
