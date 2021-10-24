@@ -54,6 +54,5 @@ public class CameraFollow : MonoBehaviour
         // Smoothly move camera to calculated position. Vector3 Lerp (vs 2) to preserve camera's z offset.
         transform.position = Vector3.Lerp(transform.position, new Vector3(x, y, transform.position.z), smoothing);
 
-        Debug.Log($"Camera size is currently {cameraHalfX * 2} by {cam.orthographicSize * 2}");
     }
 }
