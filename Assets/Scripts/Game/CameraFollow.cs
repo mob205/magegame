@@ -15,11 +15,6 @@ public class CameraFollow : MonoBehaviour
         cam = GetComponent<Camera>();
         CenterCamera();
     }
-    private IEnumerator DelayedResetCamera()
-    {
-        yield return 0;
-        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
-    }
     void FixedUpdate()
     {
         FollowPlayer();
@@ -34,11 +29,10 @@ public class CameraFollow : MonoBehaviour
     }
     public void CenterCamera()
     {
-        StartCoroutine(DelayedResetCamera());
+        transform.position = GetClampedPos();
     }
-    void FollowPlayer()
+    private Vector3 GetClampedPos()
     {
-        
         var min = viewBox.bounds.min;
         var max = viewBox.bounds.max;
         var x = player.transform.position.x;
@@ -51,8 +45,26 @@ public class CameraFollow : MonoBehaviour
         x = Mathf.Clamp(x, min.x + cameraHalfX, max.x - cameraHalfX);
         y = Mathf.Clamp(y, min.y + cam.orthographicSize, max.y - cam.orthographicSize);
 
+        return new Vector3(x, y, transform.position.z);
+
+    }
+    void FollowPlayer()
+    {
+
+        //var min = viewBox.bounds.min;
+        //var max = viewBox.bounds.max;
+        //var x = player.transform.position.x;
+        //var y = player.transform.position.y;
+
+        //// Ortho size (Distance from center to top) multiplied by resolution for dist from center to side of screen
+        //var cameraHalfX = cam.orthographicSize * ((float)Screen.width / Screen.height);
+
+        //// Ensures camera stays within view box bounds
+        //x = Mathf.Clamp(x, min.x + cameraHalfX, max.x - cameraHalfX);
+        //y = Mathf.Clamp(y, min.y + cam.orthographicSize, max.y - cam.orthographicSize);
+
         // Smoothly move camera to calculated position. Vector3 Lerp (vs 2) to preserve camera's z offset.
-        transform.position = Vector3.Lerp(transform.position, new Vector3(x, y, transform.position.z), smoothing);
+        transform.position = Vector3.Lerp(transform.position, GetClampedPos(), smoothing);
 
     }
 }
