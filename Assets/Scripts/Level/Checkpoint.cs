@@ -6,6 +6,7 @@ public class Checkpoint : MonoBehaviour
 {
     private Animator _animator;
     private CameraFollow _cam;
+    [SerializeField] private BoxCollider2D _viewBox;
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -13,6 +14,10 @@ public class Checkpoint : MonoBehaviour
         if (CheckpointStorage.CheckpointLocation == gameObject.transform.position && CheckpointStorage.CheckpointScene == SceneChanger.CurrentScene)
         {
             PlayerAbilities.instance.transform.position = gameObject.transform.position;
+            if (_viewBox)
+            {
+                _cam.SetViewbox(_viewBox);
+            }
             _cam.CenterCamera();
         } 
     }

@@ -4730,7 +4730,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -4802,6 +4802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   caster: {fileID: 0}
+  hitDebuff: {fileID: 0}
 --- !u!50 &8748878697691663155
 Rigidbody2D:
   serializedVersion: 4
