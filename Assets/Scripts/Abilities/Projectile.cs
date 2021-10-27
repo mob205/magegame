@@ -13,16 +13,20 @@ public class Projectile : MonoBehaviour
         if (caster == null || !collision.CompareTag(caster.tag)) 
         {
             var hitHealth = collision.GetComponent<Health>();
-            var hitBuffable = collision.GetComponent<BuffableEntity>();
             if (hitHealth)
             {
-                hitHealth.Damage(damage);
-                Destroy(gameObject);
+                OnSuccessfulHit(collision, hitHealth);
             }
-            if(hitDebuff && hitBuffable)
-            {
-                hitBuffable.AddBuff(hitDebuff.InitializeBuff(hitBuffable.gameObject));
-            }
+        }
+    }
+    protected virtual void OnSuccessfulHit(Collider2D collision, Health hitHealth)
+    {
+        hitHealth.Damage(damage);
+        Destroy(gameObject);
+        var hitBuffable = collision.GetComponent<BuffableEntity>();
+        if (hitDebuff && hitBuffable)
+        {
+            hitBuffable.AddBuff(hitDebuff.InitializeBuff(hitBuffable.gameObject));
         }
     }
 }
