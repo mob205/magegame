@@ -35,6 +35,7 @@ public class SeekingProjectile : Projectile
     {
         if (_target)
         {
+            // Finds the shortest direction to rotate to face the target, then rotates projectile in that direction by a fixed amount (rotationSpeed)
             var currentAngle = transform.rotation.eulerAngles.z;
             var targetAngle = Utility.GetFacingAngle(transform.position, _target.transform.position).eulerAngles.z;
             var angleDifference = targetAngle - currentAngle;
@@ -46,7 +47,8 @@ public class SeekingProjectile : Projectile
             {
                 angleDifference += 360;
             }
-            transform.Rotate(new Vector3(0, 0, angleDifference * Time.fixedDeltaTime * rotationSpeed));
+            var angleDirection = angleDifference / Mathf.Abs(angleDifference);
+            transform.Rotate(new Vector3(0, 0, angleDirection * Time.fixedDeltaTime * rotationSpeed));
             _rb.velocity = transform.right * _speed;
         }
     }
@@ -55,6 +57,7 @@ public class SeekingProjectile : Projectile
         base.OnSuccessfulHit(collision, hitHealth);
         _particles.transform.parent = null;
         _particles.Stop();
-        Destroy(_particles, _particles.main.startLifetime.constant);
+        Debug.Log(_particles.main.startLifetime.constant);
+        Destroy(_particles.gameObject, _particles.main.startLifetime.constant);
     }
 }

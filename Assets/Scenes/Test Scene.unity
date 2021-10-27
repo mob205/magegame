@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 581b1ea4b8f013b40ae81d7795a902f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 0.25
   castTime: 0.5
   icon: {fileID: 21300000, guid: b7c9acdba535f1f4eaeb0b7f332c4c93, type: 3}
   activeCooldown: 0
@@ -1343,6 +1343,7 @@ GameObject:
   - component: {fileID: 8211251530149708953}
   - component: {fileID: 4226585781210029366}
   - component: {fileID: 8211251530149708944}
+  - component: {fileID: 8211251530149708951}
   m_Layer: 0
   m_Name: Forest Mage
   m_TagString: Enemy
@@ -1358,7 +1359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8211251530149708947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.66, y: 5.95, z: 0}
+  m_LocalPosition: {x: 0, y: 5.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1409,6 +1410,21 @@ MonoBehaviour:
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8211251530149708951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8211251530149708947}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6844f6d7d1448044b2525e660401511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: {x: -13, y: 0}
+  speed: 1.5
+  startOnContact: 0
 --- !u!61 &8211251530149708953
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1490,12 +1506,12 @@ PrefabInstance:
     - target: {fileID: 8718716044578613471, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8718716044578613471, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.31
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8718716044578613471, guid: 6e23c844587d8094b9b91e34458c2824,
         type: 3}

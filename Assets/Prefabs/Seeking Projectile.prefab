@@ -4803,7 +4803,7 @@ MonoBehaviour:
   damage: 0
   caster: {fileID: 0}
   hitDebuff: {fileID: 0}
-  rotationSpeed: 6.5
+  rotationSpeed: 360
   seekRange: 50
 --- !u!58 &8637592461363259831
 CircleCollider2D:
