@@ -16,6 +16,14 @@ public class SeekingProjectile : Projectile
 
     private void Start()
     {
+        FindTarget();
+        _rb = GetComponent<Rigidbody2D>();
+        _speed = _rb.velocity.magnitude;
+        _particles = GetComponentInChildren<ParticleSystem>();
+    }
+    private void FindTarget()
+    {
+        _target = null;
         var targetsInRange = Physics2D.OverlapCircleAll(transform.position, seekRange);
         float leastDistance = Mathf.Infinity;
         foreach (var target in targetsInRange)
@@ -27,13 +35,14 @@ public class SeekingProjectile : Projectile
                 leastDistance = squaredDist;
             }
         }
-        _rb = GetComponent<Rigidbody2D>();
-        _speed = _rb.velocity.magnitude;
-        _particles = GetComponentInChildren<ParticleSystem>();
     }
     private void FixedUpdate()
     {
-        if (_target)
+        if (_target == null || _target.activeSelf == false)
+        {
+            FindTarget();
+        } 
+        else
         {
             // Finds the shortest direction to rotate to face the target, then rotates projectile in that direction by a fixed amount (rotationSpeed)
             var currentAngle = transform.rotation.eulerAngles.z;
@@ -57,7 +66,6 @@ public class SeekingProjectile : Projectile
         base.OnSuccessfulHit(collision, hitHealth);
         _particles.transform.parent = null;
         _particles.Stop();
-        Debug.Log(_particles.main.startLifetime.constant);
         Destroy(_particles.gameObject, _particles.main.startLifetime.constant);
     }
 }

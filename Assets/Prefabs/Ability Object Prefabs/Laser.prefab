@@ -51,8 +51,8 @@ MonoBehaviour:
   activeCooldown: 0
   remainingCD: 0
   warmupDuration: 2
-  damagePerTick: 12
-  ticksPerSecond: 4
+  damagePerTick: 10
+  ticksPerSecond: 5
   laserPrefab: {fileID: 191105912, guid: 3b0d87c500f8604469796f999df5468d, type: 3}
   castDebuff: {fileID: 11400000, guid: 3151e2d55b6567a4080ed9757758af31, type: 2}
 --- !u!198 &4974267808699261040
