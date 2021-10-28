@@ -15,10 +15,6 @@ public class AbilityUI : MonoBehaviour
     {
         instance = this;
     }
-    void Start()
-    {
-        
-    }
     public void UpdateAbilityUI()
     {
         abilities = PlayerAbilities.Abilities;
