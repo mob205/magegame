@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4896035386315611943}
   - component: {fileID: 622014220386223752}
   - component: {fileID: 4896035386315611950}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Frost Peaks Mage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5822427915384672654}
   - component: {fileID: 3562002295621848776}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Fireball Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}

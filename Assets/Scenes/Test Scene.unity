@@ -536,7 +536,7 @@ GameObject:
   - component: {fileID: 1771459895}
   - component: {fileID: 1771459894}
   - component: {fileID: 1771459893}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest Mage (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: 4226585781210029366}
   - component: {fileID: 8211251530149708944}
   - component: {fileID: 8211251530149708951}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Forest Mage
   m_TagString: Enemy
   m_Icon: {fileID: 0}

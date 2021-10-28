@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 558413322999426527}
   - component: {fileID: 5542806789611893872}
   - component: {fileID: 558413322999426518}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Frost Mage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787820f6d355ac54884656a48fb885b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingBuffs: []
 --- !u!61 &558413322999426515
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -300,6 +301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Freeze
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143837000081952724, guid: a31e98b92d11f5243b85993b1fe4de0e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a31e98b92d11f5243b85993b1fe4de0e, type: 3}

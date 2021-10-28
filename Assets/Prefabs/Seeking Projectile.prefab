@@ -4804,7 +4804,10 @@ MonoBehaviour:
   caster: {fileID: 0}
   hitDebuff: {fileID: 0}
   rotationSpeed: 360
-  seekRange: 30
+  seekRange: 15
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!58 &8637592461363259831
 CircleCollider2D:
   m_ObjectHideFlags: 0

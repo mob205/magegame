@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5596107904001539668}
   - component: {fileID: 5596107904001539669}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Melee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 1562130653116351296}
   - component: {fileID: 6844958032505772774}
   - component: {fileID: 1393709523090163892}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enchanted Sword
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787820f6d355ac54884656a48fb885b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingBuffs: []
 --- !u!61 &6844958032505772783
 BoxCollider2D:
   m_ObjectHideFlags: 0

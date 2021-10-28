@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8381788943565760240}
   - component: {fileID: 9023559992614659792}
   - component: {fileID: 4670567192854013957}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ice Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787820f6d355ac54884656a48fb885b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingBuffs: []
 --- !u!61 &8381788943565760229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4981,7 +4982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9080127378985911831}
   - component: {fileID: 9080127378985911830}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Fireball Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}

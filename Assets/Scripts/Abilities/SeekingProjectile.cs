@@ -6,6 +6,7 @@ public class SeekingProjectile : Projectile
 {
     [SerializeField] float rotationSpeed;
     [SerializeField] float seekRange = 50;
+    [SerializeField] LayerMask targetLayers;
 
     private GameObject _target;
     private float _speed;
@@ -24,12 +25,13 @@ public class SeekingProjectile : Projectile
     private void FindTarget()
     {
         _target = null;
-        var targetsInRange = Physics2D.OverlapCircleAll(transform.position, seekRange);
+        var targetsInRange = Physics2D.OverlapCircleAll(caster.transform.position, seekRange);
         float leastDistance = Mathf.Infinity;
         foreach (var target in targetsInRange)
         {
             var squaredDist = (target.gameObject.transform.position - transform.position).sqrMagnitude;
-            if (squaredDist < leastDistance && target.CompareTag("Enemy")) // use serialized layermask for editor control?
+            //if (squaredDist < leastDistance && (targetLayers.value >> target.gameObject.layer) == 1) // Checks if potential target's layer is in the set layermask
+            if (squaredDist < leastDistance && (targetLayers.value & (1 << (target.gameObject.layer))) > 0) 
             {
                 _target = target.gameObject;
                 leastDistance = squaredDist;
