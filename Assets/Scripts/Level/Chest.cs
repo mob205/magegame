@@ -32,7 +32,7 @@ public class Chest : Interactable
     }
     void AddUnlockAbility()
     {
-        if(PlayerAbilities.Abilities.Length < 5 && !AbilityUnlocker.UnlockedAbilities.Contains(unlockAbility.name)) 
+        if(PlayerAbilities.Abilities.Length < 5 && !AbilityUnlocker.UnlockedAbilities.Contains(unlockAbility.gameObject.name)) 
         {
             Instantiate(unlockAbility, player.gameObject.transform);
             player.UpdateAbilities();
