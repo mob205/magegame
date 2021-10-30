@@ -393,6 +393,11 @@ PrefabInstance:
       propertyPath: description
       value: 'Heal for 50% of health. Cooldown: 25 seconds'
       objectReference: {fileID: 0}
+    - target: {fileID: 6760376042556100974, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: unlockLocation
+      value: Grassland(1-4)
+      objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726402, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: m_Name

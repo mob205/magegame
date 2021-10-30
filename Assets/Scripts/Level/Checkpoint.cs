@@ -27,6 +27,8 @@ public class Checkpoint : MonoBehaviour
         {
             CheckpointStorage.SetCheckpoint(this);
             _animator.SetTrigger("Activate");
+            var playerHealth = PlayerAbilities.instance.GetComponent<Health>();
+            playerHealth.Heal(playerHealth.maxHP);
         }
     }
 }
