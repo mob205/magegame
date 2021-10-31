@@ -37,6 +37,10 @@ public class PlayerMovement : MonoBehaviour, IMove {
         {
             Jump();
         }
+        //if(Input.GetAxisRaw("Jump") == 1)
+        //{
+        //    Jump();
+        //}
     }
     public bool CheckGrounded()
     {

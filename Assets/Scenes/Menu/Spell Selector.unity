@@ -395,6 +395,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6760376042556100974, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
+      propertyPath: abilityName
+      value: Seeking Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760376042556100974, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
+      propertyPath: description
+      value: 'Shoots a bolt that automatically targets nearby enemies. Cooldown:
+        0.4 seconds | Damage: 10'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760376042556100974, guid: 3b96442e2567c9c4f945a47682e43cb9,
+        type: 3}
       propertyPath: unlockLocation
       value: Grassland(1-4)
       objectReference: {fileID: 0}
