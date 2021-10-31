@@ -1,31 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour, IMove {
 
-    [SerializeField] public float movementSpeed = 7;
+    public float movementSpeed = 7;
     public float MoveSpeed
     {
         get { return movementSpeed; }
         set { movementSpeed = value; }
     }
     public bool CanMove { get; set; } = true;
-    [SerializeField] public float jumpForce = 5;
+    [Header("Jump")]
+    [SerializeField] float jumpForce = 5;
+    [SerializeField] Transform origin;
+    [SerializeField] float castHeight = 0.1f;
+    [SerializeField] float castSizeOffset = 0.1f;
 
     Rigidbody2D _rb;
     Animator _anim;
     LayerMask groundLayer;
+    BoxCollider2D _physicsCollider;
 
     void Start ()
     {
         _rb = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         groundLayer = LayerMask.GetMask("Ground");
+        _physicsCollider = GetComponents<BoxCollider2D>().First(a => !a.isTrigger);
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
     {
         if (!CanMove)
         {
@@ -33,20 +40,15 @@ public class PlayerMovement : MonoBehaviour, IMove {
             return; 
         }
         ProcessMovement();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetAxisRaw("Jump") == 1)
         {
             Jump();
         }
-        //if(Input.GetAxisRaw("Jump") == 1)
-        //{
-        //    Jump();
-        //}
     }
     public bool CheckGrounded()
     {
-        //return Physics2D.Raycast(transform.position, Vector2.down, .6f, groundLayer);
-        return Physics2D.BoxCast(transform.position, new Vector2(0.5f,1), 0, Vector2.down, .6f, groundLayer);
-        
+        // Casts a box from the bottom of the player. Slightly thinner than player to prevent walls triggering the boxcast.
+        return Physics2D.BoxCast(origin.position, new Vector2(_physicsCollider.size.x - castSizeOffset, castHeight), 0, Vector2.down, 0, groundLayer);
     }
 
     private void Jump()
