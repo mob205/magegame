@@ -5,14 +5,12 @@ using ScriptableObjects;
 
 public class ImmobileBuff : TimedBuff
 {
-    private readonly Rigidbody2D _rb;
     private readonly ICaster _caster;
     private readonly IMove _movement;
 
     private ParticleSystem particles;
     public ImmobileBuff(ScriptableBuff buff, GameObject obj) : base(buff, obj)
     {
-        _rb = obj.GetComponent<Rigidbody2D>();
         _caster = obj.GetComponent<ICaster>();
         _movement = obj.GetComponent<IMove>();
     }

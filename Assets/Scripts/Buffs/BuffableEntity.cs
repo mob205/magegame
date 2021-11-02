@@ -18,7 +18,6 @@ public class BuffableEntity: MonoBehaviour
         //OPTIONAL, return before updating each buff if game is paused
         //if (Game.isPaused)
         //    return;
-
         foreach (var buff in _buffs.Values.ToList())
         {
             buff.Tick(Time.deltaTime);

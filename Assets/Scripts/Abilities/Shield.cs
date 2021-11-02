@@ -23,11 +23,9 @@ public class Shield : Ability
         var shieldInstance = Instantiate(shieldObject, transform.position, Quaternion.identity, transform);
         shieldInstance.tag = transform.parent.gameObject.tag;
 
-        // Face instance toward mouse
-        shieldInstance.transform.rotation = Utility.GetFacingAngle(transform.position, targetPos);
-
-        // Add the following distance offset from caster
-        shieldInstance.transform.position += shieldInstance.transform.forward * followDist;
+        
+        // Face instance toward mouse and add the following distance offset from caster
+        shieldInstance.transform.SetPositionAndRotation(transform.position + shieldInstance.transform.forward * followDist, Utility.GetFacingAngle(transform.position, targetPos));
 
         if (castBuff)
         {

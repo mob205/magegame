@@ -6,6 +6,7 @@ public class EnemyRanged : MonoBehaviour, ICaster
 {
     [SerializeField] float castDelay = 1f;
     [SerializeField] float aggroRange = 1f;
+    [SerializeField] float[] castChances = new float[5];
 
     Ability[] abilities = new Ability[5];
     private bool isCasting;
@@ -24,6 +25,7 @@ public class EnemyRanged : MonoBehaviour, ICaster
     }
     void Update()
     {
+        GetRandomIndex();
         UpdateCastTime();
         CastAbilities();
     }
@@ -43,10 +45,23 @@ public class EnemyRanged : MonoBehaviour, ICaster
         var isAggro = Vector2.Distance(transform.position, player.transform.position) <= aggroRange;
         if (isAggro && !isCasting)
         {
-            var random = Random.Range(0, abilities.Length);
+            var random = GetRandomIndex();
             abilities[random].CastAbility(player.transform);
             StartCastTime(abilities[random].CastTime + castDelay);
         }
+    }
+    private int GetRandomIndex()
+    {
+        float random = Random.Range(0, 101);
+        for(int i = 0; i < castChances.Length; i++)
+        {
+            random -= castChances[i];
+            if(random <= 0)
+            {
+                return i;
+            }
+        }
+        return 0;
     }
     private void StartCastTime(float castTime)
     {

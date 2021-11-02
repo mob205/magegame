@@ -58,9 +58,12 @@ public class SeekingProjectile : Projectile
             {
                 angleDifference += 360;
             }
-            var angleDirection = angleDifference / Mathf.Abs(angleDifference);
-            transform.Rotate(new Vector3(0, 0, angleDirection * Time.fixedDeltaTime * rotationSpeed));
-            _rb.velocity = transform.right * _speed;
+            if(angleDifference != 0)
+            {
+                var angleDirection = angleDifference / Mathf.Abs(angleDifference);
+                transform.Rotate(new Vector3(0, 0, angleDirection * Time.fixedDeltaTime * rotationSpeed));
+                _rb.velocity = transform.right * _speed;
+            }
         }
     }
     protected override void OnSuccessfulHit(Collider2D collision, Health hitHealth)

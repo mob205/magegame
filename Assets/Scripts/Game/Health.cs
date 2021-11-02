@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
     public float maxHP = 100;
     public float currentHealth = 0;
     public float damageModifier = 1;
-    [SerializeField] bool isInvulnerable = false;
+    public bool isInvulnerable = false;
     [SerializeField] UnityEvent deathEvent = null;
 
     void Start()
