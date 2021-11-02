@@ -4,7 +4,7 @@ using System;
 
 public static class AbilityUnlocker
 {
-    public static List<string> UnlockedAbilities = new() { "Fireball" };
+    public static List<string> UnlockedAbilities = new List<string>() { "Fireball" };
 
     public static void UnlockAbility(string abilityName)
     {
