@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6510186928024411890}
-  - component: {fileID: 6510186928024411901}
+  - component: {fileID: 2902100581240218022}
   - component: {fileID: 4805282371748818133}
   - component: {fileID: 7440997884861268114}
   - component: {fileID: -5591664835007476215}
@@ -34,8 +34,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &6510186928024411901
-PolygonCollider2D:
+--- !u!61 &2902100581240218022
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -44,10 +44,10 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 2.0166378, y: -0.032267332}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -57,17 +57,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 2.4084103, y: 1.0290551}
-      - {x: 1.6081793, y: 1.0936302}
-      - {x: 1.6476424, y: 1.0838283}
-      - {x: 1.6319559, y: 0.7999378}
-      - {x: 1.5773125, y: -0.12720263}
-      - {x: 1.6849345, y: -0.8093543}
-      - {x: 1.6665322, y: -0.89461297}
-      - {x: 1.6484524, y: -1.1398729}
-      - {x: 2.3212092, y: -1.2253342}
+  serializedVersion: 2
+  m_Size: {x: 0.74491024, y: 2.0032907}
+  m_EdgeRadius: 0
 --- !u!198 &4805282371748818133
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -702,7 +694,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: -62.5}
+    m_Rotation: {x: 0, y: 0, z: -30}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -839,7 +831,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 125
+      value: 60
       mode: 0
       spread: 0
       speed:
