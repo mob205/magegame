@@ -54,7 +54,7 @@ public class PlayerAbilities : MonoBehaviour, ICaster
     // Iterate through every active ability. Cast ability if has active input.
     private void CastAbilities()
     {
-        if (!CanCast) { return; }
+        if (!CanCast || PauseMenu.IsPaused) { return; }
         for (int i = 0; i < Abilities.Length; i++)
         {
             if (Input.GetAxisRaw("Ability" + i) == 1 && !isCasting && !Abilities[i].activeCooldown)  

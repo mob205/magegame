@@ -62,9 +62,14 @@ public class SelectionSlot : MonoBehaviour
     }
     void Drag()
     {
-        if(AbilitySelector.selected == this)
+        if (AbilitySelector.selected == this)
         {
+            dragImage.gameObject.SetActive(true);
             dragImage.transform.position = Input.mousePosition;
+        }
+        else
+        {
+            dragImage.gameObject.SetActive(false);
         }
     }
     void CheckSelection()
