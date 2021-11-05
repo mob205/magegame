@@ -24657,7 +24657,8 @@ PrefabInstance:
         Jump - Space Bar
 
 
-'
+        Pause
+        - Tab'
       objectReference: {fileID: 0}
     - target: {fileID: 724757386, guid: 43be490098e948c469844d3d893ee12c, type: 3}
       propertyPath: m_IsActive

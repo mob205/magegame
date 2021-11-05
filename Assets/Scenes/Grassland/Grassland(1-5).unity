@@ -66934,7 +66934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b701529f3701d488ff2ec9890d6fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ticksPerSecond: 1
+  ticksPerSecond: 99
   damagePerTick: 9999
 --- !u!61 &1975512860
 BoxCollider2D:

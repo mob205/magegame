@@ -362,26 +362,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1509725611}
-    - target: {fileID: 4177639922944842917, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: description
-      value: 'Light yourself ablaze, dealing 1.5x damage and becoming immune to freezing
-        and slowing effects for 9 seconds. Cooldown: 30 seconds'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4500772356684623341, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: description
-      value: 'Freezes all nearby enemies for 5 seconds. Damage: 20 | Cooldown: 12
-        seconds'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6760376042556100974, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: description
-      value: 'Shoots a bolt that automatically targets nearby enemies. Cooldown:
-        0.4 seconds | Damage: 8
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 9161103306972726402, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
       propertyPath: m_Name
@@ -491,12 +471,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161103308037008713, guid: 3b96442e2567c9c4f945a47682e43cb9,
-        type: 3}
-      propertyPath: description
-      value: 'Summons a shield that blocks projectiles from the targeted direction
-        for 5 seconds. Take 66% reduced damage during this time. Cooldown: 12 seconds.'
       objectReference: {fileID: 0}
     - target: {fileID: 9161103308541356479, guid: 3b96442e2567c9c4f945a47682e43cb9,
         type: 3}
