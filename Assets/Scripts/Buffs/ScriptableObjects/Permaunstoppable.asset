@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c043ef82e70ccb74ca0a077706829018, type: 3}
-  m_Name: Shield Defense
+  m_Script: {fileID: 11500000, guid: 6468c578d86d03b43a5aa84e72a58df6, type: 3}
+  m_Name: Permaunstoppable
   m_EditorClassIdentifier: 
-  Duration: 5
+  Duration: 99999
   IsDurationStacked: 0
   IsRefreshStacked: 1
   IsEffectStacked: 0
-  DefenseModifier: 0.66
+  ImmobilizationBuffs:
+  - {fileID: 11400000, guid: 6125a3e8a2248944faaf05d0ddcbff56, type: 2}
+  - {fileID: 11400000, guid: 3151e2d55b6567a4080ed9757758af31, type: 2}
+  - {fileID: 11400000, guid: a99f58e247928be4693be46cefef1c2d, type: 2}

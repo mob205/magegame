@@ -4767,7 +4767,7 @@ GameObject:
   - component: {fileID: 8637592461363259831}
   - component: {fileID: 8637592461363259828}
   m_Layer: 0
-  m_Name: Enemy Seeking Projectile
+  m_Name: Dark Seeker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4803,7 +4803,7 @@ MonoBehaviour:
   damage: 0
   caster: {fileID: 0}
   hitDebuff: {fileID: 0}
-  rotationSpeed: 100
+  rotationSpeed: 90
   seekRange: 15
   targetLayers:
     serializedVersion: 2

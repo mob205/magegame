@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 15
-  castTime: 1
+  castTime: 0
   icon: {fileID: 21300000, guid: ad7ebbd5ddaec5e48b5a4b65192d7a1b, type: 3}
   activeCooldown: 0
   remainingCD: 0

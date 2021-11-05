@@ -7,7 +7,8 @@ public class Checkpoint : MonoBehaviour
     private Animator _animator;
     private CameraFollow _cam;
     [SerializeField] private BoxCollider2D _viewBox;
-    private void Start()
+    bool hasActivated;
+    private void OnEnable()
     {
         _animator = GetComponent<Animator>();
         _cam = Camera.main.GetComponent<CameraFollow>();
@@ -23,12 +24,13 @@ public class Checkpoint : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && collision.isTrigger)
+        if (collision.CompareTag("Player") && collision.isTrigger && !hasActivated)
         {
             CheckpointStorage.SetCheckpoint(this);
             _animator.SetTrigger("Activate");
             var playerHealth = PlayerAbilities.instance.GetComponent<Health>();
             playerHealth.Heal(playerHealth.maxHP);
+            hasActivated = true;
         }
     }
 }

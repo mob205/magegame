@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Grassland/Grassland(1-BONUS).unity
     guid: 06e713cadc8fefd4fa1125830da5c7aa
+  - enabled: 1
+    path: Assets/Scenes/Grassland/Grassland(1-5).unity
+    guid: dc3f9eeb4fd4d9749a112438ff6ae1c9
   m_configObjects: {}

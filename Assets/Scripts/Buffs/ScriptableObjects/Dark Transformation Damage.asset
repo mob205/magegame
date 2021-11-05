@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c043ef82e70ccb74ca0a077706829018, type: 3}
-  m_Name: Shield Defense
+  m_Script: {fileID: 11500000, guid: 1e0b48d353192f146b31fb21ac878501, type: 3}
+  m_Name: Dark Transformation Damage
   m_EditorClassIdentifier: 
-  Duration: 5
+  Duration: 999999
   IsDurationStacked: 0
-  IsRefreshStacked: 1
+  IsRefreshStacked: 0
   IsEffectStacked: 0
-  DefenseModifier: 0.66
+  BuffParticles: {fileID: 0}
+  DamageModifier: 1.5

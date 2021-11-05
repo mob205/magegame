@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c043ef82e70ccb74ca0a077706829018, type: 3}
-  m_Name: Shield Defense
+  m_Script: {fileID: 11500000, guid: 6a82410a1cd58ce4197f911977bad54d, type: 3}
+  m_Name: Chilled
   m_EditorClassIdentifier: 
   Duration: 5
   IsDurationStacked: 0
-  IsRefreshStacked: 1
+  IsRefreshStacked: 0
   IsEffectStacked: 0
-  DefenseModifier: 0.66
+  SpeedModifier: 0.5

@@ -13,9 +13,12 @@ public class HealthUI : MonoBehaviour
         healthBar = GetComponent<Slider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         healthBar.value = targetHealth.currentHealth / targetHealth.maxHP;
+    }
+    public void SetTarget(Health health)
+    {
+        targetHealth = health;
     }
 }
