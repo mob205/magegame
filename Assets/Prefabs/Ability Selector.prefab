@@ -183,8 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability: {fileID: 4056293381185981418, guid: 4b9e6e4c3402d16438cf132bfd15546e, type: 3}
   abilityName: 'Arcane Ascension '
-  description: 'Pushes caster into the air. Slowly glide back down to the ground.
-    Cooldown: 10 seconds.'
+  description: 'Launch into the air, then slowly glide back down to the ground. Cooldown:
+    10 seconds.'
   unlockLocation: Grassland(1-2)
   maxDuplicates: 1
   dragImage: {fileID: 1513445894}
@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 1513445896}
   - component: {fileID: 1513445895}
   - component: {fileID: 1513445894}
+  - component: {fileID: 1612387875}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -375,6 +376,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &1612387875
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513445892}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &551664422034586912
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +410,7 @@ GameObject:
   - component: {fileID: 5072214871298001639}
   - component: {fileID: 8228035903209585510}
   - component: {fileID: 4499263831518609734}
+  - component: {fileID: 117200860}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -498,6 +521,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &117200860
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551664422034586912}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &849182070342355292
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +555,7 @@ GameObject:
   - component: {fileID: 544064104517880034}
   - component: {fileID: 5571401928587922493}
   - component: {fileID: 8556775676830155593}
+  - component: {fileID: 220117521}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -621,6 +666,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &220117521
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849182070342355292}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &1692490396592791353
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +700,7 @@ GameObject:
   - component: {fileID: 3408957538233114511}
   - component: {fileID: 8924022279050065995}
   - component: {fileID: 6993478688894730841}
+  - component: {fileID: 212404848}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -744,6 +811,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &212404848
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692490396592791353}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &1799976390237006221
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,8 +1010,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability: {fileID: 3190057885251222797, guid: a31e98b92d11f5243b85993b1fe4de0e, type: 3}
   abilityName: Freeze
-  description: 'Freezes all nearby enemies for 3 seconds. Damage: 8 | Cooldown: 25
-    seconds'
+  description: 'Freezes all nearby enemies for 5 seconds. Damage: 20 | Cooldown:
+    12 seconds'
   unlockLocation: Grassland(1-4)
   maxDuplicates: 1
   dragImage: {fileID: 8556775676830155593}
@@ -1004,6 +1092,7 @@ GameObject:
   - component: {fileID: 8357184171114371001}
   - component: {fileID: 6911086396590280848}
   - component: {fileID: 3919745032360498684}
+  - component: {fileID: 1716547278}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -1114,6 +1203,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &1716547278
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3841674459033074128}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &4442125039607282940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,6 +1237,7 @@ GameObject:
   - component: {fileID: 4882203417841310663}
   - component: {fileID: 4108782565517732400}
   - component: {fileID: 1629110673333390769}
+  - component: {fileID: 1054050462}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -1237,6 +1348,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &1054050462
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442125039607282940}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &5199848519814623985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1382,7 @@ GameObject:
   - component: {fileID: 288102721018332755}
   - component: {fileID: 4992844968396666807}
   - component: {fileID: 6394583762622126295}
+  - component: {fileID: 96184822}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -1360,6 +1493,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &96184822
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5199848519814623985}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &6556712496079841374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,10 +1689,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 4072235183586139775, guid: fab48355f9a83754fa0e5eff91b7f5c6, type: 3}
-  abilityName: 'Dark Mage''s '
-  description: 'Shoots a bolt that seeks out enemies. Cooldown: 0.4 seconds | Damage:
-    10'
-  unlockLocation: Grassland(1-BONUS)
+  abilityName: Seeking Flame
+  description: 'Shoots a bolt that automatically targets nearby enemies. Cooldown:
+    0.4 seconds | Damage: 8
+
+'
+  unlockLocation: Grassland(1-4)
   maxDuplicates: 1
   dragImage: {fileID: 4499263831518609734}
   isUnlocked: 0
@@ -1660,7 +1816,7 @@ MonoBehaviour:
   ability: {fileID: 4162659210201960606, guid: 7c252a94cdddcdc4785c9c8798ff2c2e, type: 3}
   abilityName: On Fire!
   description: 'Light yourself ablaze, dealing 1.5x damage and becoming immune to
-    Frozen and slows for 9 seconds. Cooldown: 30 seconds'
+    freezing and slowing effects for 9 seconds. Cooldown: 30 seconds'
   unlockLocation: Grassland(1-3)
   maxDuplicates: 1
   dragImage: {fileID: 6993478688894730841}
@@ -1782,7 +1938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability: {fileID: 8915784620029004868, guid: d3c9205537dc071429261a0eda0bce0a, type: 3}
   abilityName: Heal
-  description: 'Heals caster for 50 health. Cooldown: 25 seconds'
+  description: 'Heal for 50% of health. Cooldown: 25 seconds'
   unlockLocation: Grassland(1-3)
   maxDuplicates: 1
   dragImage: {fileID: 6394583762622126295}
@@ -2121,6 +2277,7 @@ GameObject:
   - component: {fileID: 9161103306982314982}
   - component: {fileID: 9161103306982314983}
   - component: {fileID: 9161103306982314980}
+  - component: {fileID: 2073267126}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -2231,6 +2388,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &2073267126
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161103306982314978}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &9161103306991967430
 GameObject:
   m_ObjectHideFlags: 0
@@ -2244,6 +2422,7 @@ GameObject:
   - component: {fileID: 9161103306991967434}
   - component: {fileID: 9161103306991967435}
   - component: {fileID: 9161103306991967432}
+  - component: {fileID: 1215941466}
   m_Layer: 5
   m_Name: Drag Object
   m_TagString: Untagged
@@ -2354,6 +2533,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &1215941466
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161103306991967430}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &9161103307328282615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,7 +3277,7 @@ MonoBehaviour:
   ability: {fileID: 7071389398729726226, guid: 1a306bb9c47a3b54aa74c63ea868ef02, type: 3}
   abilityName: Cast Shield
   description: 'Summons a shield that blocks projectiles from the targeted direction
-    for 4 seconds. Take 66% reduced damage during this time. Cooldown: 12 seconds.'
+    for 5 seconds. Take 66% reduced damage during this time. Cooldown: 12 seconds.'
   unlockLocation: Grassland(1-1)
   maxDuplicates: 1
   dragImage: {fileID: 9161103306991967432}
@@ -3219,6 +3419,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!223 &504201465
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9161103308143149782}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1 &9161103308147847504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4099,6 +4320,12 @@ PrefabInstance:
 --- !u!224 &9161103307927345701 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5846971833705881441, guid: 897f4637e6befa74a82af31a79ae1d34,
+    type: 3}
+  m_PrefabInstance: {fileID: 3316438285729563972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9161103308143149782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5846971833390057362, guid: 897f4637e6befa74a82af31a79ae1d34,
     type: 3}
   m_PrefabInstance: {fileID: 3316438285729563972}
   m_PrefabAsset: {fileID: 0}

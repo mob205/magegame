@@ -8,6 +8,7 @@ public class Checkpoint : MonoBehaviour
     private CameraFollow _cam;
     [SerializeField] private BoxCollider2D _viewBox;
     bool hasActivated;
+
     private void OnEnable()
     {
         _animator = GetComponent<Animator>();
@@ -19,8 +20,7 @@ public class Checkpoint : MonoBehaviour
             {
                 _cam.SetViewbox(_viewBox);
             }
-            _cam.CenterCamera();
-        } 
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

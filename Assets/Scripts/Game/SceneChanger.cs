@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneChanger : MonoBehaviour
 {
     public static string CurrentScene { get; private set; }
-    private void OnEnable()
+    private void Awake()
     {
-        SceneManager.sceneLoaded += SetCurrentScene;
+        CurrentScene = SceneManager.GetActiveScene().name;
     }
     public void LoadScene(string sceneName)
     {
@@ -24,9 +24,5 @@ public class SceneChanger : MonoBehaviour
         {
             SceneManager.LoadScene("Spell Selector");
         }
-    }
-    private void SetCurrentScene(Scene scene, LoadSceneMode mode)
-    {
-        CurrentScene = scene.name;
     }
 }
